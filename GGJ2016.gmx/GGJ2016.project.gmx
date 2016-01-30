@@ -19,6 +19,7 @@
     <sprite>sprites\spr_bed</sprite>
     <sprite>sprites\spr_dstairs</sprite>
     <sprite>sprites\spr_fdoor</sprite>
+    <sprite>sprites\bathtub</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -27,6 +28,7 @@
     <background>background\bg_daytime</background>
     <background>background\bg_hall</background>
     <background>background\bg_kbedroom</background>
+    <background>background\bg_bathroom</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -60,12 +62,13 @@
     <object>objects\obj_kroomhall</object>
     <object>objects\obj_daylog</object>
     <object>objects\obj_event</object>
+    <object>objects\obj_work_events</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_daytime</room>
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_master_bedroom</room>
     <room>rooms\rm_bathroom</room>
-    <room>rooms\rm_daytime</room>
     <room>rooms\rm_bedroom</room>
     <room>rooms\rm_kitchen</room>
     <room>rooms\rm_livingrom</room>
