@@ -1,0 +1,40 @@
+url_open("https://twitter.com/intent/tweet?text=Check out this awesome game! &hashtags=MorningRich")
+url_open("https://facebook.com/plugins/like.php?href=http/www.facebook.com/-----FacebookPageName")
+url_open("https://facebook.com/plugins/share.php?href=http/www.facebook.com/-----FacebookPageName")
+
+
+// If first four seconds of daytime (Early morning)
+if (time < 12) {
+    background_colour = make_color_rgb(230,200,100);
+}
+// If next 6 seconds (Morning)
+else if ((time >= 12) || (time < 30)) {
+    background_colour = make_color_rgb(230,220,150);
+}
+// If next 10 seconds (Before noon)
+else if ((time >= 30) || (time < 60)) {
+    background_colour = make_color_rgb(170,220,220);
+}
+// If next 10 seconds (Noon)
+else if ((time >= 60) || (time < 90)) {
+    background_colour = make_color_rgb(70,150,255);
+}
+// If next 10 seconds (Afternoon)
+else if ((time >= 90) || (time < 120)) {
+    background_colour = make_color_rgb(100,170,255);
+}
+// If next 6 seconds (Late afternoon)
+else if ((time >= 120) || (time < 138)) {
+    background_colour = make_color_rgb(255,200,100);
+}
+// If next 4 seconds (Dusk)
+else if ((time >= 138) || (time < 150)) {
+    background_colour = make_color_rgb(255,100,20);
+}
+// If next 10 seconds (Evening)
+else if ((time >= 150) || (time < 180)) {
+    background_colour = make_color_rgb(0,0,100);
+}
+else {
+    time = 0;
+}

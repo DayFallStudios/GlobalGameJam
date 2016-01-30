@@ -7,29 +7,41 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_richard</sprite>
-    <sprite>sprites\spr_btn_new_game</sprite>
-    <sprite>sprites\spr_btn_twitter</sprite>
+    <sprite>sprites\spr_bedroomdoor</sprite>
     <sprite>sprites\spr_btn_exit</sprite>
-    <sprite>sprites\spr_btn_options</sprite>
     <sprite>sprites\spr_btn_facebook</sprite>
+    <sprite>sprites\spr_btn_new_game</sprite>
+    <sprite>sprites\spr_btn_options</sprite>
+    <sprite>sprites\spr_btn_twitter</sprite>
+    <sprite>sprites\spr_up</sprite>
+    <sprite>sprites\spr_down</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
     <background>background\bg_main_menu</background>
     <background>background\bg_main_menu_fg</background>
+    <background>background\bg_daytime</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_richard</object>
-    <object>objects\obj_btn_new_game</object>
+    <object>objects\obj_bedroomdoor</object>
     <object>objects\obj_btn_exit</object>
+    <object>objects\obj_btn_facebook</object>
+    <object>objects\obj_btn_new_game</object>
     <object>objects\obj_btn_options</object>
     <object>objects\obj_btn_twitter</object>
-    <object>objects\obj_btn_facebook</object>
+    <object>objects\obj_up</object>
+    <object>objects\obj_time</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_daytime</room>
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_master_bedroom</room>
+    <room>rooms\rm__bathroom</room>
+    <room>rooms\rm_bedroom</room>
+    <room>rooms\rm_kitchen</room>
+    <room>rooms\rm_livingrom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
