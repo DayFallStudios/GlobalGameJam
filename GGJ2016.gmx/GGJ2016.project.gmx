@@ -47,6 +47,8 @@
     <object>objects\obj_down</object>
     <object>objects\obj_fdoor</object>
     <object>objects\obj_dstairs</object>
+    <object>objects\obj_Toothbrush</object>
+    <object>objects\obj_Tiolet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_daytime</room>
