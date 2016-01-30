@@ -57,6 +57,8 @@
     <object>objects\obj_washroomhall</object>
     <object>objects\obj_hallkroom</object>
     <object>objects\obj_kroomhall</object>
+    <object>objects\obj_daylog</object>
+    <object>objects\obj_event</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
