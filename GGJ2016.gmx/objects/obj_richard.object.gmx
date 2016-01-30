@@ -28,7 +28,8 @@
             <string>/// Initialize variables
 
 move_speed = 5;
-anxiety = 0;
+global.anxiety = 0;
+global.time = 0;
 </string>
           </argument>
         </arguments>
@@ -60,13 +61,15 @@ anxiety = 0;
 //move = key_left+key_right;
 //x += move * move_speed;
 
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bedroomdoor, false, true)){
-    obj_up.x = x;
-    obj_up.y = y - 175;
-    obj_up.visible = true;
+if (instance_exists(obj_bedroomdoor)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bedroomdoor, false, true)){
+        obj_up.x = x;
+        obj_up.y = y - 175;
+        obj_up.visible = true;
+        }
+    else {
+        obj_up.visible = false;
     }
-else {
-    obj_up.visible = false;
 }
 
 // don't leave the room

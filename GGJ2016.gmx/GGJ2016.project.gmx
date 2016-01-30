@@ -15,6 +15,7 @@
     <sprite>sprites\spr_btn_twitter</sprite>
     <sprite>sprites\spr_up</sprite>
     <sprite>sprites\spr_down</sprite>
+    <sprite>sprites\spr_wife</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -24,6 +25,9 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts"/>
+  <fonts name="fonts">
+    <font>fonts\fnt_arial</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_richard</object>
     <object>objects\obj_bedroomdoor</object>
@@ -34,12 +38,13 @@
     <object>objects\obj_btn_twitter</object>
     <object>objects\obj_up</object>
     <object>objects\obj_time</object>
+    <object>objects\obj_wife</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_bathroom</room>
     <room>rooms\rm_daytime</room>
     <room>rooms\rm_master_bedroom</room>
-    <room>rooms\rm__bathroom</room>
     <room>rooms\rm_bedroom</room>
     <room>rooms\rm_kitchen</room>
     <room>rooms\rm_livingrom</room>
