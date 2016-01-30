@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Initialize time
 
-var time = 0;
+time = 0;
 </string>
           </argument>
         </arguments>
@@ -59,31 +59,31 @@ if (time &lt; 12) {
     background_colour = make_color_rgb(230,200,100);
 }
 // If next 6 seconds (Morning)
-else if ((time &gt;= 12) || (time &lt; 30)) {
+else if ((time &gt;= 12) &amp;&amp; (time &lt; 30)) {
     background_colour = make_color_rgb(230,220,150);
 }
 // If next 10 seconds (Before noon)
-else if ((time &gt;= 30) || (time &lt; 60)) {
+else if ((time &gt;= 30) &amp;&amp; (time &lt; 60)) {
     background_colour = make_color_rgb(170,220,220);
 }
 // If next 10 seconds (Noon)
-else if ((time &gt;= 60) || (time &lt; 90)) {
+else if ((time &gt;= 60) &amp;&amp; (time &lt; 90)) {
     background_colour = make_color_rgb(70,150,255);
 }
 // If next 10 seconds (Afternoon)
-else if ((time &gt;= 90) || (time &lt; 120)) {
+else if ((time &gt;= 90) &amp;&amp; (time &lt; 120)) {
     background_colour = make_color_rgb(100,170,255);
 }
 // If next 6 seconds (Late afternoon)
-else if ((time &gt;= 120) || (time &lt; 138)) {
+else if ((time &gt;= 120) &amp;&amp; (time &lt; 138)) {
     background_colour = make_color_rgb(255,200,100);
 }
 // If next 4 seconds (Dusk)
-else if ((time &gt;= 138) || (time &lt; 150)) {
+else if ((time &gt;= 138) &amp;&amp; (time &lt; 150)) {
     background_colour = make_color_rgb(255,100,20);
 }
 // If next 10 seconds (Evening)
-else if ((time &gt;= 150) || (time &lt; 180)) {
+else if ((time &gt;= 150) &amp;&amp; (time &lt; 180)) {
     background_colour = make_color_rgb(0,0,100);
 }
 else {

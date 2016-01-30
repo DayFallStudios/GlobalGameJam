@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -36,6 +36,8 @@ global.time_units = 3;
 
 // Boolean for whether or not a chatlog shows what's been spoken
 global.showlog = 0;
+
+depth = -10
 </string>
           </argument>
         </arguments>
@@ -58,23 +60,72 @@ global.showlog = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Get Player Input
-//key_right = keyboard_check(ord("D") || vk_right || ord("d"));
-//key_left = -keyboard_check(ord("A") || vk_left || ord("a"));
-
-// React to input
-// won't move if both are being pressed.
-//move = key_left+key_right;
-//x += move * move_speed;
-
-if (instance_exists(obj_bedroomdoor)) {
-    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bedroomdoor, false, true)){
+            <string>
+if (instance_exists(obj_mbedhall)) {
+    if (collision_rectangle(x-40, y-150, x+40 , y+150, obj_mbedhall, false, true)){
         obj_up.x = x;
-        obj_up.y = y - 175;
+        obj_up.y = y-175;
         obj_up.visible = true;
         }
     else {
         obj_up.visible = false;
+    }
+}
+
+
+if (instance_exists(obj_washroomhall)) {
+    if (collision_rectangle(x-30, y-150, x+30 , y+150, obj_washroomhall, false, true)){
+        obj_up.x = x;
+        obj_up.y = 240;
+        obj_up.visible = true;
+        }
+    else {
+        obj_up.visible = false;
+    }
+}
+
+if (instance_exists(obj_kroomhall)) {
+    if (collision_rectangle(x-30, y-150, x+30 , y+150, obj_kroomhall, false, true)){
+        obj_up.x = x;
+         obj_up.y = 240;
+        obj_up.visible = true;
+        }
+    else {
+        obj_up.visible = false;
+    }
+}
+
+if (instance_exists(obj_hallmbed) &amp;&amp; instance_exists(obj_hallwashroom) &amp;&amp;  instance_exists(obj_hallkroom)) {    
+    if (collision_rectangle(x-30, 300, x+30 , 600, obj_hallmbed, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallwashroom, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallkroom, false, true)){
+        obj_up.x = x;
+        obj_up.y = 275;
+        obj_up.visible = true;
+        }
+    else {
+        obj_up.visible = false;
+    }
+}
+
+
+if (instance_exists(obj_dstairs)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_dstairs, false, true)){
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+        }
+    else{
+        obj_down.visible = false;
+        }
+    }
+
+if (instance_exists(obj_bed)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bed, false, true)){
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+        }
+    else {
+        obj_down.visible = false;
     }
 }
 
@@ -182,9 +233,39 @@ x += 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bedroomdoor, false, true))
+            <string>if (collision_rectangle(x-50, y-150, x+50, y+150, obj_mbedhall, false, true))
     {
-    room_goto(rm_main_menu)
+    room_goto(rm_hall);
+    x = 60;
+    y = 450;
+    }
+    
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_kroomhall, false, true))
+    {
+    room_goto(rm_hall);
+    x = 544;
+    y = 448;
+    }
+    
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallmbed, false, true))
+    {
+    room_goto(rm_master_bedroom);
+    x = 864;
+    y = 384;
+    }
+    
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallwashroom, false, true))
+    {
+    room_goto(rm_bathroom);
+    x = 864;
+    y = 384;
+    }
+    
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallkroom, false, true))
+    {
+    room_goto(rm_bedroom);
+    x = 896;
+    y = 416;
     }
 </string>
           </argument>

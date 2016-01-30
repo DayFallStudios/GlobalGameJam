@@ -29,7 +29,28 @@
           </argument>
           <argument>
             <kind>4</kind>
-            <string>1</string>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>text_logged = false;
+</string>
           </argument>
         </arguments>
       </action>
@@ -53,11 +74,13 @@
             <kind>1</kind>
             <string>///Talk
 text = "Shitter's clogged.";
+draw_set_colour(c_fuchsia);
 if (instance_exists(obj_richard) and (room == rm_bathroom)) {
     if(place_meeting(x,y,obj_richard)) {
-        draw_text(x,y-160,text);
-        if ((ds_list_find_value(global.loglist, ds_list_size(global.loglist)-1)) != text) {
-           ds_list_add(global.loglist, text + string(ds_list_size(global.loglist) + 1)); 
+        draw_text(x-30,y-160,text);
+        if !(text_logged) {
+           ds_list_add(global.loglist, "Maria: "+text);
+           text_logged = true;
         }
     }
     draw_sprite(sprite_index,image_index,x,y);

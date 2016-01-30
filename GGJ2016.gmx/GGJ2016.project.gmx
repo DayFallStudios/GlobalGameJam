@@ -16,21 +16,28 @@
     <sprite>sprites\spr_up</sprite>
     <sprite>sprites\spr_down</sprite>
     <sprite>sprites\spr_wife</sprite>
+    <sprite>sprites\spr_bed</sprite>
+    <sprite>sprites\spr_dstairs</sprite>
+    <sprite>sprites\spr_fdoor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
     <background>background\bg_main_menu</background>
     <background>background\bg_main_menu_fg</background>
     <background>background\bg_daytime</background>
+    <background>background\bg_hall</background>
+    <background>background\bg_kbedroom</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <script>scripts\script0.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_arial</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_richard</object>
-    <object>objects\obj_bedroomdoor</object>
+    <object>objects\obj_mbedhall</object>
     <object>objects\obj_btn_exit</object>
     <object>objects\obj_btn_facebook</object>
     <object>objects\obj_btn_new_game</object>
@@ -40,15 +47,29 @@
     <object>objects\obj_time</object>
     <object>objects\obj_wife</object>
     <object>objects\obj_log</object>
+    <object>objects\obj_bed</object>
+    <object>objects\obj_down</object>
+    <object>objects\obj_fdoor</object>
+    <object>objects\obj_dstairs</object>
+    <object>objects\obj_Toothbrush</object>
+    <object>objects\obj_Tiolet</object>
+    <object>objects\obj_hallmbed</object>
+    <object>objects\obj_hallwashroom</object>
+    <object>objects\obj_washroomhall</object>
+    <object>objects\obj_hallkroom</object>
+    <object>objects\obj_kroomhall</object>
+    <object>objects\obj_daylog</object>
+    <object>objects\obj_event</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_master_bedroom</room>
     <room>rooms\rm_bathroom</room>
     <room>rooms\rm_daytime</room>
-    <room>rooms\rm_master_bedroom</room>
     <room>rooms\rm_bedroom</room>
     <room>rooms\rm_kitchen</room>
     <room>rooms\rm_livingrom</room>
+    <room>rooms\rm_hall</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
