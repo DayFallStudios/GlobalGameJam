@@ -16,6 +16,7 @@
     <sprite>sprites\spr_up</sprite>
     <sprite>sprites\spr_down</sprite>
     <sprite>sprites\spr_wife</sprite>
+    <sprite>sprites\spr_bed</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -39,6 +40,8 @@
     <object>objects\obj_time</object>
     <object>objects\obj_wife</object>
     <object>objects\obj_log</object>
+    <object>objects\obj_bed</object>
+    <object>objects\obj_down</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_daytime</room>

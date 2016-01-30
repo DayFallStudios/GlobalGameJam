@@ -36,6 +36,8 @@ global.time_units = 3;
 
 // Boolean for whether or not a chatlog shows what's been spoken
 global.showlog = 0;
+
+depth = -10
 </string>
           </argument>
         </arguments>
@@ -75,6 +77,17 @@ if (instance_exists(obj_bedroomdoor)) {
         }
     else {
         obj_up.visible = false;
+    }
+}
+
+if (instance_exists(obj_bed)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bed, false, true)){
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+        }
+    else {
+        obj_down.visible = false;
     }
 }
 
