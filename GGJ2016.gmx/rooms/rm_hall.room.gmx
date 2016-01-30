@@ -55,7 +55,6 @@
     <instance objName="obj_hallwashroom" x="288" y="448" name="inst_782BC0A0" locked="0" code="" scaleX="0.641921401023865" scaleY="0.821548819541931" colour="4294967295" rotation="0"/>
     <instance objName="obj_hallkroom" x="544" y="448" name="inst_84A702B6" locked="0" code="" scaleX="0.641921401023865" scaleY="0.821548819541931" colour="4294967295" rotation="0"/>
     <instance objName="obj_hallmbed" x="32" y="448" name="inst_195E93D4" locked="0" code="" scaleX="0.641921401023865" scaleY="0.821548819541931" colour="4294967295" rotation="0"/>
-    <instance objName="obj_up" x="288" y="256" name="inst_F417995F" locked="0" code="" scaleX="0.495327115058899" scaleY="0.496551722288132" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

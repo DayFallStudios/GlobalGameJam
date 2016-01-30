@@ -26,6 +26,7 @@
     <background>background\bg_main_menu_fg</background>
     <background>background\bg_daytime</background>
     <background>background\bg_hall</background>
+    <background>background\bg_kbedroom</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
