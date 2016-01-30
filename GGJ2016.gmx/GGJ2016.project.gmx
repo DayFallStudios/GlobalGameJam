@@ -13,6 +13,8 @@
     <sprite>sprites\spr_btn_new_game</sprite>
     <sprite>sprites\spr_btn_options</sprite>
     <sprite>sprites\spr_btn_twitter</sprite>
+    <sprite>sprites\spr_up</sprite>
+    <sprite>sprites\spr_down</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -27,6 +29,7 @@
     <object>objects\obj_btn_new_game</object>
     <object>objects\obj_btn_options</object>
     <object>objects\obj_btn_twitter</object>
+    <object>objects\obj_up</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>

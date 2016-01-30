@@ -53,6 +53,7 @@
   <instances>
     <instance objName="obj_richard" x="416" y="384" name="inst_4D31A321" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bedroomdoor" x="832" y="384" name="inst_7A65D0EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_up" x="416" y="192" name="inst_8C4FCE5A" locked="0" code="" scaleX="0.495327115058899" scaleY="0.496551722288132" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -59,6 +59,15 @@ anxiety = 0;
 // won't move if both are being pressed.
 //move = key_left+key_right;
 //x += move * move_speed;
+
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bedroomdoor, false, true)){
+    obj_up.x = x;
+    obj_up.y = y - 175;
+    obj_up.visible = true;
+    }
+else {
+    obj_up.visible = false;
+    }
 </string>
           </argument>
         </arguments>
