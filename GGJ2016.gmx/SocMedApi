@@ -1,0 +1,3 @@
+url_open("https://twitter.com/intent/tweet?text=Check out this awesome game! &hashtags=MorningRich")
+url_open("https://facebook.com/plugins/like.php?href=http/www.facebook.com/-----FacebookPageName")
+url_open("https://facebook.com/plugins/share.php?href=http/www.facebook.com/-----FacebookPageName")
