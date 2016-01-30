@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="5" enumb="39">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,13 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x+=3;
+            <string>/// Initialize variables
+
+horiz_speed = 0;
+move_speed = 5;
+anxiety = 0;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="37">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -48,7 +52,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x-=3;
+            <string>// Get Player Input
+key_right = keyboard_check(ord("D") || vk_right);
+key_left = -keyboard_check(ord("A") || vk_left);
+
+// React to input
+// won't move if both are being pressed.
+move = key_left+key_right;
+horiz_speed = move * move_speed;
 </string>
           </argument>
         </arguments>
