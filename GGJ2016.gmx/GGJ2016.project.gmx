@@ -19,6 +19,7 @@
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
     <background>background\bg_main_menu</background>
+    <background>background\bg_main_menu_fg</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
