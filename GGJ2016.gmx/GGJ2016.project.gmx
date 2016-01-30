@@ -8,6 +8,11 @@
   <sprites name="sprites">
     <sprite>sprites\spr_richard</sprite>
     <sprite>sprites\spr_bedroomdoor</sprite>
+    <sprite>sprites\spr_btn_exit</sprite>
+    <sprite>sprites\spr_btn_facebook</sprite>
+    <sprite>sprites\spr_btn_new_game</sprite>
+    <sprite>sprites\spr_btn_options</sprite>
+    <sprite>sprites\spr_btn_twitter</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -17,6 +22,11 @@
   <objects name="objects">
     <object>objects\obj_richard</object>
     <object>objects\obj_bedroomdoor</object>
+    <object>objects\obj_btn_exit</object>
+    <object>objects\obj_btn_facebook</object>
+    <object>objects\obj_btn_new_game</object>
+    <object>objects\obj_btn_options</object>
+    <object>objects\obj_btn_twitter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
