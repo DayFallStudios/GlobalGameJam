@@ -20,6 +20,7 @@
     <background>background\bg_master_bedroom</background>
     <background>background\bg_main_menu</background>
     <background>background\bg_main_menu_fg</background>
+    <background>background\bg_daytime</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -31,8 +32,10 @@
     <object>objects\obj_btn_options</object>
     <object>objects\obj_btn_twitter</object>
     <object>objects\obj_up</object>
+    <object>objects\obj_time</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_daytime</room>
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_master_bedroom</room>
     <room>rooms\rm__bathroom</room>
