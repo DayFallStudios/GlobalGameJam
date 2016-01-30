@@ -38,6 +38,9 @@ global.time_units = 3;
 global.showlog = 0;
 
 depth = -10
+
+// List of all events that can happen at work
+global.work_events_list = ds_list_create();
 </string>
           </argument>
         </arguments>
