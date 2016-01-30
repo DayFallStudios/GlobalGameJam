@@ -39,6 +39,7 @@
     <object>objects\obj_up</object>
     <object>objects\obj_time</object>
     <object>objects\obj_wife</object>
+    <object>objects\obj_log</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
