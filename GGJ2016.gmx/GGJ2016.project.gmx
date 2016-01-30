@@ -17,12 +17,15 @@
     <sprite>sprites\spr_down</sprite>
     <sprite>sprites\spr_wife</sprite>
     <sprite>sprites\spr_bed</sprite>
+    <sprite>sprites\spr_dstairs</sprite>
+    <sprite>sprites\spr_fdoor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
     <background>background\bg_main_menu</background>
     <background>background\bg_main_menu_fg</background>
     <background>background\bg_daytime</background>
+    <background>background\bg_hall</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -42,6 +45,8 @@
     <object>objects\obj_log</object>
     <object>objects\obj_bed</object>
     <object>objects\obj_down</object>
+    <object>objects\obj_fdoor</object>
+    <object>objects\obj_dstairs</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_daytime</room>
@@ -51,6 +56,7 @@
     <room>rooms\rm_bedroom</room>
     <room>rooms\rm_kitchen</room>
     <room>rooms\rm_livingrom</room>
+    <room>rooms\room7</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
