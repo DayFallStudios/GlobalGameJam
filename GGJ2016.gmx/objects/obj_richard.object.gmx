@@ -67,8 +67,11 @@ if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bedroomdoor, false, true))
     }
 else {
     obj_up.visible = false;
-    }
-    
+}
+
+// don't leave the room
+x = min(x,room_width);
+x = max(x,0);
 
 </string>
           </argument>
