@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Exit Game
+
+game_end();
 </string>
           </argument>
         </arguments>

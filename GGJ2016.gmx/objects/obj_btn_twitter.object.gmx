@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="6" enumb="0">
+    <event eventtype="6" enumb="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Do twitter stuff
+            <string>/// do twitter stuff
+
+url_open("https://twitter.com/intent/tweet?text=Check out this awesome game! &amp;hashtags=MorningRich");
 </string>
           </argument>
         </arguments>
