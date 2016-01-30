@@ -19,6 +19,7 @@
     <sprite>sprites\spr_bed</sprite>
     <sprite>sprites\spr_dstairs</sprite>
     <sprite>sprites\spr_fdoor</sprite>
+    <sprite>sprites\bathtub</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -27,6 +28,7 @@
     <background>background\bg_daytime</background>
     <background>background\bg_hall</background>
     <background>background\bg_kbedroom</background>
+    <background>background\bg_bathroom</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

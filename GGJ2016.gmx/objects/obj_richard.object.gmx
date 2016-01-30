@@ -144,6 +144,62 @@ if (keyboard_check_released(ord('L'))){
         </arguments>
       </action>
     </event>
+    <event eventtype="5" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (collision_rectangle(x-50, y-150, x+50, y+150, obj_mbedhall, false, true))
+    {
+    room_goto(rm_hall);
+    x = 60;
+    y = 450;
+    }
+    
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_kroomhall, false, true))
+    {
+    room_goto(rm_hall);
+    x = 544;
+    y = 448;
+    }
+    
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallmbed, false, true))
+    {
+    room_goto(rm_master_bedroom);
+    x = 864;
+    y = 384;
+    }
+    
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallwashroom, false, true))
+    {
+    room_goto(rm_bathroom);
+    x = 864;
+    y = 384;
+    }
+    
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallkroom, false, true))
+    {
+    room_goto(rm_bedroom);
+    x = 896;
+    y = 416;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="5" enumb="68">
       <action>
         <libid>1</libid>
@@ -247,6 +303,13 @@ if (collision_rectangle(x-50, y-150, x+50, y+150, obj_kroomhall, false, true))
     y = 448;
     }
     
+if (collision_rectangle(x-50, y-150, x+50, y+150, obj_washroomhall, false, true))
+    {
+    room_goto(rm_hall);
+    x = 288;
+    y = 448;
+    }
+    
 if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallmbed, false, true))
     {
     room_goto(rm_master_bedroom);
@@ -257,8 +320,8 @@ if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallmbed, false, true))
 if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallwashroom, false, true))
     {
     room_goto(rm_bathroom);
-    x = 864;
-    y = 384;
+    x = 896;
+    y = 512;
     }
     
 if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallkroom, false, true))
