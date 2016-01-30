@@ -29,6 +29,7 @@
 sentence = "";
 anx_effect = 0;
 money_effect = 0;
+family_effect = 0;
 </string>
           </argument>
         </arguments>

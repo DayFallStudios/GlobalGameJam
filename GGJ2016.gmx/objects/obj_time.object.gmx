@@ -80,7 +80,6 @@ timeframe = "";
             <string>/// every frame do:
 
 time += 0.10; // after 1 second, time = 3;
-show_debug_message(string(time));
 if (time==12) drawn_frame=false;
 if (time==30) drawn_frame=false;
 if (time==60) drawn_frame=false;
