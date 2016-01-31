@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_ustairs" x="64" y="480" name="inst_D2F98F0E" locked="0" code="" scaleX="1.01923072338104" scaleY="1.20863306522369" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fdoor" x="832" y="320" name="inst_353719E0" locked="0" code="" scaleX="0.582608699798584" scaleY="0.785234928131103" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fdoor" x="864" y="448" name="inst_353719E0" locked="0" code="" scaleX="0.582608699798584" scaleY="0.785234928131103" colour="4294967295" rotation="0"/>
     <instance objName="obj_table" x="704" y="512" name="inst_1EB1AE07" locked="0" code="" scaleX="0.562841534614563" scaleY="0.526595771312714" colour="4294967295" rotation="0"/>
     <instance objName="obj_lhallliving" x="512" y="448" name="inst_C1AD5A95" locked="0" code="" scaleX="0.612068951129913" scaleY="0.759197294712067" colour="4294967295" rotation="0"/>
     <instance objName="obj_lhallkitchen" x="256" y="448" name="inst_8925AA5B" locked="0" code="" scaleX="0.626086950302124" scaleY="0.791946291923523" colour="4294967295" rotation="0"/>

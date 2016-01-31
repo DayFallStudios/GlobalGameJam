@@ -51,7 +51,6 @@
     <sprite>sprites\spr_son</sprite>
     <sprite>sprites\spr_computer</sprite>
     <sprite>sprites\spr_rich_moving</sprite>
-
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -126,7 +125,6 @@
     <object>objects\obj_kid</object>
     <object>objects\obj_sonComputer</object>
     <object>objects\obj_time</object>
-
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
