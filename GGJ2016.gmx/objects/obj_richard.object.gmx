@@ -476,6 +476,7 @@ if (move != 0) {
             <string>obj_down.x = x;
 obj_down.y = y - 175;
 obj_down.visible = true;
+
 if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
     room_goto(rm_pong_single);
     obj_richard.visible=false;
@@ -506,7 +507,8 @@ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
+            <string>
+if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
     room_goto(rm_pong_mult);
     obj_richard.visible=false;
     obj_down.visible=false;
@@ -534,11 +536,7 @@ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text="Dad Play this game with me!";
-
-
-show_message(text);
-if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
         room_goto(rm_lowerhall);
 
     }
