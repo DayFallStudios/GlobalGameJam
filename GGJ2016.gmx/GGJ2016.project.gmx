@@ -50,6 +50,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\script1.gml</script>
     <script>scripts\script0.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -88,12 +89,15 @@
     <object>objects\obj_goal_right</object>
     <object>objects\obj_goal_left</object>
     <object>objects\obj_controller</object>
+    <object>objects\obj_controller_singleGame</object>
     <object>objects\obj_ustairs</object>
     <object>objects\obj_table</object>
     <object>objects\obj_lhallliving</object>
     <object>objects\obj_lhallkitchen</object>
     <object>objects\obj_livinglhall</object>
     <object>objects\obj_kitchenlhall</object>
+    <object>objects\obj_computer</object>
+    <object>objects\obj_delay</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
@@ -105,7 +109,8 @@
     <room>rooms\rm_livingrom</room>
     <room>rooms\rm_hall</room>
     <room>rooms\rm_lowerhall</room>
-    <room>rooms\rm_pong</room>
+    <room>rooms\rm_pong_mult</room>
+    <room>rooms\rm_pong_single</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
