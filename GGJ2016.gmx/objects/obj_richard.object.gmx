@@ -170,6 +170,28 @@ if (instance_exists(obj_kroomhall)) {
     }
 }
 
+if (instance_exists(obj_kitchenlhall)) {
+    if (collision_rectangle(x-30, y-150, x+30 , y+150, obj_kitchenlhall, false, true)){
+        obj_up.x = x;
+        obj_up.y = 200;
+        obj_up.visible = true;
+        }
+    else {
+        obj_up.visible = false;
+    }
+}
+
+if (instance_exists(obj_livinglhall)) {
+    if (collision_rectangle(x-30, y-150, x+30 , y+150, obj_livinglhall, false, true)){
+        obj_up.x = x;
+         obj_up.y = 175;
+        obj_up.visible = true;
+        }
+    else {
+        obj_up.visible = false;
+    }
+}
+
 if (instance_exists(obj_hallmbed) &amp;&amp; instance_exists(obj_hallwashroom) &amp;&amp;  instance_exists(obj_hallkroom) &amp;&amp; instance_exists(obj_dstairs)) {    
     if (collision_rectangle(x-50, y-150, x+50, y+150, obj_dstairs, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallmbed, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallwashroom, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallkroom, false, true)){
         obj_up.x = x;
@@ -563,28 +585,6 @@ if (keyboard_check_released(ord('L'))){
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="87">
-      <action>
-        <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>11</kind>
-            <room>rm_livingrom</room>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="5" enumb="68">
       <action>
         <libid>1</libid>
@@ -674,7 +674,7 @@ x += 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x,y,obj_lhallkitchen)){
+            <string>/*if (place_meeting(x,y,obj_lhallkitchen)){
     room_goto(5);
     x = 64;
     y = 384;
