@@ -160,7 +160,7 @@ else if (time&gt;length*8) {
     // Choice time
     global.day+=1;
     time = 0;
-    if(global.day &gt; 0) {
+    if(global.day &gt;= 7) {
         room_goto(rm_endscreen);
     }
     else {
