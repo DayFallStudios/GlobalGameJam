@@ -54,7 +54,7 @@
     <instance objName="obj_kitchenlhall" x="64" y="384" name="inst_AC7A3010" locked="0" code="" scaleX="0.502183377742767" scaleY="0.713804721832275" colour="4294967295" rotation="0"/>
     <instance objName="obj_meal" x="352" y="576" name="inst_17F51C18" locked="0" code="" scaleX="0.934959352016449" scaleY="1.04201686382294" colour="4294967295" rotation="0"/>
     <instance objName="obj_kettle" x="704" y="352" name="inst_CEDD55E6" locked="0" code="" scaleX="0.126984134316444" scaleY="0.113207548856735" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wife" x="864" y="480" name="inst_C01A7008" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wife" x="576" y="384" name="inst_E2509B2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
