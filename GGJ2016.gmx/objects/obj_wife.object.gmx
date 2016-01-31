@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text_logged=false;
+            <string>visible=true;
+text_logged=false;
 </string>
           </argument>
         </arguments>
@@ -48,13 +49,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text = "The Shitters Clogged";
-draw_set_colour(c_black);
-if (instance_exists(obj_richard) and (room == rm_kitchen)) {
-    if(place_meeting(x,y,obj_richard)) {
-        draw_text(x-30,y-200,text);
+            <string> draw_sprite(sprite_index,image_index,x,y);
+ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
+    text = "Good Morning Honey";
+    draw_set_colour(c_black);
+    if (instance_exists(obj_richard) and (room == rm_kitchen)) {
+        if(place_meeting(x,y,obj_richard)) {
+            draw_text(x-30,y-250,text);
+        }
     }
-    draw_sprite(sprite_index,image_index,x,y);
+    
+    global.fam_rating += 2;
+    global.familyevents += 1;
+    global.anxiety+=1;
+    if(global.familyevents==3){
+        global.familyevents=0;
+        room_goto(rm_daytime);
+    }
 }
 </string>
           </argument>

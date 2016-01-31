@@ -20,6 +20,6 @@
   <width>380</width>
   <height>179</height>
   <frames>
-    <frame index="0">images\spr_bed_0.png</frame>
+    <frame index="0">images\spr_messybed_0.png</frame>
   </frames>
 </sprite>
