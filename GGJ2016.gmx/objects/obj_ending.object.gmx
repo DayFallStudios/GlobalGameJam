@@ -116,30 +116,35 @@ else if (global.fam_rating &lt;= 0) {
 if (flag_ga &amp;&amp; flag_bf) {
     ending_line += "#";
     ending_line += "Is sacrificing your family's needs for your own well being worth it?";
+    audio_play_sound(snd_title,0,1);
 }
 
 // Good Anxiety, good family
 if (flag_ga &amp;&amp; flag_gf) {
     ending_line += "#";
     ending_line += "You are the king of managing the well being of yourself and others! Well done.";
+    audio_play_sound(snd_good_end,0,1);
 }
 
 // Bad Anxiety1, good family
 if (flag_ba1 &amp;&amp; flag_gf) {
     ending_line += "#";
     ending_line += "Your family loves you, but you cannot shake your own unpleasant feelings.#Life is complicated.";
+    //audio_play_sound(snd_bad_end,0,1);
 }
 
 // Bad Anxiety2, good family
 if (flag_ba1 &amp;&amp; flag_gf) {
     ending_line += "#";
     ending_line += "I can't imagine they will feel so strongly once they find out what you've done.";
+    //audio_play_sound(snd_bad_end,0,1);
 }
 
 // Bad Anxiety, bad family
 if ((flag_ba1 || flag_ba2) &amp;&amp; flag_gf) {
     ending_line += "#";
     ending_line += "That... is something else. You have thrown your life away in the course of a week.";
+    //audio_play_sound(snd_bad_end,0,1);
 }
 ending_line += "##"
 ending_line += "Daily rituals can be incredibly important in maintaining a healthy mental state,#but must be balanced with the needs of those around us.##Thank you for playing!";

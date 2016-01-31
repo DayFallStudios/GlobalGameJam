@@ -32,6 +32,14 @@ while(n&lt;10) {
     ds_list_add(dayloglist, " #");
     n++;
 }
+
+if (global.anxiety &gt; 15) {
+    audio_play_sound(Anxiety,0,1);
+}
+else if (global.anxiety &lt;= 15) {
+    audio_play_sound(snd_no_anxiety,0,1);
+}
+
 </string>
           </argument>
         </arguments>

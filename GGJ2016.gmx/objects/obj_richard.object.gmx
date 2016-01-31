@@ -418,7 +418,6 @@ if (move != 0) {
 } else {
     sprite_index = spr_richard;
 }
-
 </string>
           </argument>
         </arguments>
@@ -461,7 +460,7 @@ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_kid">
+    <event eventtype="4" ename="obj_kroomhall">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -478,6 +477,7 @@ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
+
             <string>
 if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
     global.fam_rating += 2;
@@ -486,13 +486,19 @@ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
     room_goto(rm_pong_mult);
     obj_richard.visible=false;
     obj_down.visible=false;
-    }
 
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
+        room_goto(rm_hall);
+        x = 544;
+        y = 448;
+
+    }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
+
     <event eventtype="4" ename="obj_mat">
       <action>
         <libid>1</libid>
@@ -600,6 +606,9 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
       </action>
     </event>
     <event eventtype="4" ename="obj_kitchenlhall">
+
+    <event eventtype="4" ename="obj_kid">
+
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -616,7 +625,38 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>
+if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
+    global.fam_rating += 2;
+    global.familyevents += 1;
+    room_goto(rm_pong_mult);
+    obj_richard.visible=false;
+    obj_down.visible=false;
+    }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_kitchenlhall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
         room_goto(rm_lowerhall);
 
     }
@@ -642,7 +682,7 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
         room_goto(rm_lowerhall);
 
     }
@@ -668,37 +708,10 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
     room_goto(rm_hall);
     x = 830;
     y = 448;
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_kroomhall">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
-        room_goto(rm_hall);
-        x = 544;
-        y = 448;
     }
 </string>
           </argument>
@@ -722,7 +735,7 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
         room_goto(rm_bedroom);
         x = 896;
         y = 416;
@@ -749,7 +762,7 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
     room_goto(rm_hall);
     x = 288;
     y = 450;
@@ -776,7 +789,7 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
     room_goto(rm_bathroom);
     x = 896;
     y = 415;
@@ -803,7 +816,7 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
         room_goto(rm_master_bedroom);
         x = 864;
         y = 384;
@@ -830,7 +843,7 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
     room_goto(rm_lowerhall);
     x = 64;
     y = 448;
@@ -926,7 +939,7 @@ if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
     room_goto(rm_hall);
         x = 60;
         y = 450;

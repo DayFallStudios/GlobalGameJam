@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Start a game
-
+audio_stop_sound(snd_title);
 room_goto(rm_master_bedroom);
 </string>
           </argument>
