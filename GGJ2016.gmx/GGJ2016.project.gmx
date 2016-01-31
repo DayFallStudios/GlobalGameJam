@@ -4,7 +4,18 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound9</sound>
+    <sound>sound\Anxiety</sound>
+    <sound>sound\walking</sound>
+    <sound>sound\eating</sound>
+    <sound>sound\coffee</sound>
+    <sound>sound\caw</sound>
+    <sound>sound\pong</sound>
+    <sound>sound\birdcall</sound>
+    <sound>sound\car</sound>
+    <sound>sound\ping</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_richard</sprite>
     <sprite>sprites\spr_bedroomdoor</sprite>
@@ -93,8 +104,8 @@
     <room>rooms\rm_kitchen</room>
     <room>rooms\rm_livingrom</room>
     <room>rooms\rm_hall</room>
-    <room>rooms\rm_pong</room>
     <room>rooms\rm_lowerhall</room>
+    <room>rooms\rm_pong</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
