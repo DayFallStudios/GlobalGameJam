@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>/// Initialize variables
 
-move_speed = 5;
+movespeed = 7;
 global.anxiety = 7;
 global.time = 0;
+global.day = 0; // goes up to 7
 global.money = 0;
 
 // How many things Richard can do before he has to go to work
@@ -184,7 +185,7 @@ if (instance_exists(obj_kitchenlhall)) {
 if (instance_exists(obj_livinglhall)) {
     if (collision_rectangle(x-30, y-150, x+30 , y+150, obj_livinglhall, false, true)){
         obj_up.x = x;
-         obj_up.y = 175;
+        obj_up.y = 175;
         obj_up.visible = true;
         }
     else {
@@ -243,6 +244,58 @@ if (instance_exists(obj_sonComputer)) {
         obj_down.y = y - 175;
         obj_down.visible = true;
         }
+
+if (instance_exists(obj_Toothbrush)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_Toothbrush, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_down.visible = false;
+    }
+}
+
+if (instance_exists(obj_Tiolet)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_Tiolet, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_down.visible = false;
+    }
+}
+
+ if (instance_exists(obj_garcan)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_garcan, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_visible = false;
+    }
+ }
+ 
+ if (instance_exists(obj_kettle)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_kettle, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_down.visible = false;
+    }
+ }
+ 
+ if (instance_exists(obj_mat)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_mat, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+
     else {
         obj_down.visible = false;
     }
@@ -254,6 +307,25 @@ if (instance_exists(obj_kid)) {
         obj_down.y = y - 175;
         obj_down.visible = true;
         }
+
+ if (instance_exists(obj_tv)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_tv, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+
+    else {
+        obj_down.visible = false;
+    }
+}
+
+ if (instance_exists(obj_wife)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_wife, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y  - 175;
+        obj_down.visible = true;
+    }
     else {
         obj_down.visible = false;
     }
@@ -335,6 +407,43 @@ if (keyboard_check_released(ord('L'))){
         }
         
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///animate sprite
+
+key_right = keyboard_check(vk_right);
+key_left = -keyboard_check(vk_left);
+
+move = key_left+key_right;
+hsp = move*movespeed;
+
+if (move != 0) {
+    image_xscale = move;
+    sprite_index = spr_rich_moving;
+    image_speed = 0.3;
+
+} else {
+    sprite_index = spr_richard;
+}
+
 </string>
           </argument>
         </arguments>
@@ -737,7 +846,7 @@ x -= 5;
           <argument>
             <kind>1</kind>
             <string>/// move right
-x += 5;
+x += 7;
 </string>
           </argument>
         </arguments>
@@ -793,7 +902,7 @@ if(place_meeting(x,y,obj_lhallliving)){
           <argument>
             <kind>1</kind>
             <string>/// move left
-x -= 5;
+x -= 7;
 </string>
           </argument>
         </arguments>

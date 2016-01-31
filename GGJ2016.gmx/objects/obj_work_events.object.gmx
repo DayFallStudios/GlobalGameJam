@@ -27,256 +27,258 @@
             <kind>1</kind>
             <string>/// Define all events
 
-////********** GOOD events **********////
-// Event #1 (note nwe = New Work Event
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "The boss thought you were doing a great job; you've been promoted!";
-nwe.anx_effect = -5;
-nwe.money_effect = 5;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #2
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Boss says you can go home early with pay!";
-nwe.anx_effect = -5;
-nwe.money_effect = 5;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #3
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Your coworker complimented your complexion. That was nice of her.";
-nwe.anx_effect = -5;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #4
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You made some good progress on your work.";
-nwe.anx_effect = -5;
-nwe.money_effect = 3;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #5
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You just made a massive sale. The boss should be happy with that!";
-nwe.anx_effect = -5;
-nwe.money_effect = 6;
-ds_list_add(global.work_events_list, nwe);
-
-////********** MEH events **********////
-// Event #6
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You spilled some papers on the floor. Nobody helped you pick them up.";
-nwe.anx_effect = 2;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #7
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You found a $20 bill on the ground outdoors.";
-nwe.anx_effect = -1;
-nwe.money_effect = 1;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #8
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "'Hot singles in your area!' Your boss didn't like seeing that on your screen.";
-nwe.anx_effect = 3;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #9
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Computer crashed. A loss in productivity was noticed.";
-nwe.anx_effect = 3;
-nwe.money_effect = -1;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #10
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Wife packed your favourite sandwich today.";
-nwe.anx_effect = -1;
-nwe.money_effect = 0;
-nwe.family_effect = 1;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #11
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You decided to unwind and watch some cat videos online.";
-nwe.anx_effect = -1;
-nwe.money_effect = -2;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #12
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "The cute IT girl was just in.";
-nwe.anx_effect = -1;
-nwe.money_effect = -2;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #13
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You wrote your personal feelings on Tumblr.";
-nwe.anx_effect = -1;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #14
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Trolls attacked your blog.";
-nwe.anx_effect = 2;
-nwe.money_effect = 0;
-nwe.family_effect = -2;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #15
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Your long awaited parcel arrived today.";
-nwe.anx_effect = -1;
-nwe.money_effect = -2;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #16
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You forgot your lunch";
-nwe.anx_effect = 1;
-nwe.money_effect = 1;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #17
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You lost your debit card somehow.";
-nwe.anx_effect = 2;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #18
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Boss seemed to be in a good mood.";
-nwe.anx_effect = -2;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #19
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You got two sodas from the machine when you only paid for one!";
-nwe.anx_effect = -1;
-nwe.money_effect = 1;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #20
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Coworker brought his dog in.";
-nwe.anx_effect = -1;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #21
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Allergies kicked in.";
-nwe.anx_effect = 2;
-nwe.money_effect = -1;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #22
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "The printer didn't work.";
-nwe.anx_effect = 1;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #23
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Was that a hot air balloon just now?";
-nwe.anx_effect = 0;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #24
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You heard talk about layoffs.";
-nwe.anx_effect = 3;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #25
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You imagine a sci-fi cartoon starring you and Maury Povich: Rich and Maury.";
-nwe.anx_effect = 1;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #26
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Coworker brought an accordion into work today.";
-nwe.anx_effect = 0;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #27
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You forgot about a report you were supposed to do.";
-nwe.anx_effect = 2;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #28
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Someone mentioned a TV show you might like. Perhaps you'll watch it.";
-nwe.anx_effect = -1;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #29
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You think you overheard some coworkers saying 'Rich the Bitch'.";
-nwe.anx_effect = 3;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #30
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "For some reason, doors weren't working for you today.";
-nwe.anx_effect = 2;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-//************ BAD Events ************* //
-// Event #31
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You accidentally opened some adult content instead of your Powerpoint presentation.";
-nwe.anx_effect = 5;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #32
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You got mugged.";
-nwe.anx_effect = 5;
-nwe.money_effect = -3;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #33
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "Your nemesis, Gary, got the promotion you wanted.";
-nwe.anx_effect = 5;
-nwe.money_effect = -3;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #34
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You felt as though life has no purpose";
-nwe.anx_effect = 5;
-nwe.money_effect = 0;
-ds_list_add(global.work_events_list, nwe);
-
-// Event #35
-nwe = instance_create(10,10,obj_event);
-nwe.sentence = "You spilled scalding coffee on your lap.";
-nwe.anx_effect = 5;
-nwe.money_effect = -2;
-nwe.family_effect = -1;
-ds_list_add(global.work_events_list, nwe);
+if(ds_list_size(global.work_events_list) == 0) {
+    ////********** GOOD events **********////
+    // Event #1 (note nwe = New Work Event
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "The boss thought you were doing a great job; you've been promoted!";
+    nwe.anx_effect = -2;
+    nwe.money_effect = 5;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #2
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Boss says you can go home early with pay!";
+    nwe.anx_effect = -2;
+    nwe.money_effect = 5;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #3
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Your coworker complimented your complexion. That was nice of her.";
+    nwe.anx_effect = -2;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #4
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You made some good progress on your work.";
+    nwe.anx_effect = -2;
+    nwe.money_effect = 3;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #5
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You just made a massive sale. The boss should be happy with that!";
+    nwe.anx_effect = -2;
+    nwe.money_effect = 6;
+    ds_list_add(global.work_events_list, nwe);
+    
+    ////********** MEH events **********////
+    // Event #6
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You spilled some papers on the floor. Nobody helped you pick them up.";
+    nwe.anx_effect = 2;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #7
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You found a $20 bill on the ground outdoors.";
+    nwe.anx_effect = -1;
+    nwe.money_effect = 1;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #8
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "'Hot singles in your area!' Your boss didn't like seeing that on your screen.";
+    nwe.anx_effect = 3;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #9
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Computer crashed. A loss in productivity was noticed.";
+    nwe.anx_effect = 3;
+    nwe.money_effect = -1;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #10
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Wife packed your favourite sandwich today.";
+    nwe.anx_effect = -1;
+    nwe.money_effect = 0;
+    nwe.family_effect = 1;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #11
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You decided to unwind and watch some cat videos online.";
+    nwe.anx_effect = -1;
+    nwe.money_effect = -2;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #12
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "The cute IT girl was just in.";
+    nwe.anx_effect = -1;
+    nwe.money_effect = -2;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #13
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "There was only decaf in the staff lounge.";
+    nwe.anx_effect = 2;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #14
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Trolls attacked your blog.";
+    nwe.anx_effect = 2;
+    nwe.money_effect = 0;
+    nwe.family_effect = -2;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #15
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Your long awaited parcel arrived today.";
+    nwe.anx_effect = -1;
+    nwe.money_effect = -2;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #16
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You forgot your lunch.";
+    nwe.anx_effect = 1;
+    nwe.money_effect = 1;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #17
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You lost your debit card somehow.";
+    nwe.anx_effect = 2;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #18
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Boss seemed to be in a good mood.";
+    nwe.anx_effect = -2;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #19
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You got two sodas from the machine when you only paid for one!";
+    nwe.anx_effect = -1;
+    nwe.money_effect = 1;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #20
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Coworker brought his dog in.";
+    nwe.anx_effect = -1;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #21
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Allergies kicked in.";
+    nwe.anx_effect = 2;
+    nwe.money_effect = -1;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #22
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "The printer didn't work.";
+    nwe.anx_effect = 1;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #23
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Was that a hot air balloon just now?";
+    nwe.anx_effect = 0;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #24
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You heard talk about layoffs.";
+    nwe.anx_effect = 3;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #25
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You imagine a sci-fi cartoon starring you and Maury Povich: Rich and Maury.";
+    nwe.anx_effect = 1;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #26
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Coworker brought an accordion into work today.";
+    nwe.anx_effect = 0;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #27
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You forgot about a report you were supposed to do.";
+    nwe.anx_effect = 2;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #28
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Someone mentioned a TV show you might like. Perhaps you'll watch it.";
+    nwe.anx_effect = -1;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #29
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You think you overheard some coworkers saying 'Rich the Bitch'.";
+    nwe.anx_effect = 3;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #30
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "For some reason, doors weren't working for you today.";
+    nwe.anx_effect = 2;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    //************ BAD Events ************* //
+    // Event #31
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You accidentally opened some adult content instead of your Powerpoint presentation.";
+    nwe.anx_effect = 5;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #32
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You got mugged.";
+    nwe.anx_effect = 5;
+    nwe.money_effect = -3;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #33
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "Your nemesis, Gary, got the promotion you wanted.";
+    nwe.anx_effect = 5;
+    nwe.money_effect = -3;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #34
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You felt as though life has no purpose";
+    nwe.anx_effect = 5;
+    nwe.money_effect = 0;
+    ds_list_add(global.work_events_list, nwe);
+    
+    // Event #35
+    nwe = instance_create(10,10,obj_event);
+    nwe.sentence = "You spilled scalding coffee on your lap.";
+    nwe.anx_effect = 5;
+    nwe.money_effect = -2;
+    nwe.family_effect = -1;
+    ds_list_add(global.work_events_list, nwe);
+}
 </string>
           </argument>
         </arguments>

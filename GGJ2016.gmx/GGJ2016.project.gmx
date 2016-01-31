@@ -50,6 +50,8 @@
     <sprite>sprites\spr_title</sprite>
     <sprite>sprites\spr_son</sprite>
     <sprite>sprites\spr_computer</sprite>
+    <sprite>sprites\spr_rich_moving</sprite>
+
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -79,7 +81,6 @@
     <object>objects\obj_btn_options</object>
     <object>objects\obj_btn_twitter</object>
     <object>objects\obj_up</object>
-    <object>objects\obj_time</object>
     <object>objects\obj_wife</object>
     <object>objects\obj_log</object>
     <object>objects\obj_bed</object>
@@ -124,6 +125,8 @@
     <object>objects\obj_title</object>
     <object>objects\obj_kid</object>
     <object>objects\obj_sonComputer</object>
+    <object>objects\obj_time</object>
+
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
