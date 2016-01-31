@@ -158,10 +158,15 @@ else if ((time &gt;= length*7) &amp;&amp; (time &lt; length*8) &amp;&amp; !(draw
 }
 else if (time&gt;length*8) {
     // Choice time
-    obj_richard.visible = true;
-    time = 0;
     global.day+=1;
-    room_goto(rm_lowerhall);
+    time = 0;
+    if(global.day &gt; 0) {
+        room_goto(rm_endscreen);
+    }
+    else {
+        obj_richard.visible = true;
+        room_goto(rm_lowerhall);
+    } 
 }
 </string>
           </argument>

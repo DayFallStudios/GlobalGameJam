@@ -62,6 +62,7 @@
     <background>background\bg_bathroom</background>
     <background>background\bg_kitchen</background>
     <background>background\bg_living</background>
+    <background>background\bg_end</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -124,6 +125,7 @@
     <object>objects\obj_kid</object>
     <object>objects\obj_sonComputer</object>
     <object>objects\obj_time</object>
+    <object>objects\obj_ending</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
@@ -132,6 +134,7 @@
     <room>rooms\rm_bathroom</room>
     <room>rooms\rm_bedroom</room>
     <room>rooms\rm_kitchen</room>
+    <room>rooms\rm_endscreen</room>
     <room>rooms\rm_livingrom</room>
     <room>rooms\rm_hall</room>
     <room>rooms\rm_lowerhall</room>
