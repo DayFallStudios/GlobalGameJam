@@ -37,16 +37,16 @@
     <event eventtype="5" enumb="87">
       <action>
         <libid>1</libid>
-        <id>111</id>
+        <id>109</id>
         <kind>0</kind>
-        <userelative>0</userelative>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_move_random</functionname>
+        <functionname>action_move_to</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
-        <relative>0</relative>
+        <relative>-1</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
@@ -63,16 +63,16 @@
     <event eventtype="5" enumb="83">
       <action>
         <libid>1</libid>
-        <id>111</id>
+        <id>109</id>
         <kind>0</kind>
-        <userelative>0</userelative>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_move_random</functionname>
+        <functionname>action_move_to</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
-        <relative>0</relative>
+        <relative>-1</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
@@ -81,7 +81,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>7</string>
+            <string>+7</string>
           </argument>
         </arguments>
       </action>
