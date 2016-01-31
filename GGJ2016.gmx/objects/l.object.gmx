@@ -25,13 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>length = 10;
-dayloglist = ds_list_create();
-n=0;
-while(n&lt;10) {
-    ds_list_add(dayloglist, " #");
-    n++;
-}
+            <string>offset = 0;
+length = 10;
+global.loglist = ds_list_create();
 </string>
           </argument>
         </arguments>
@@ -54,7 +50,7 @@ while(n&lt;10) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ds_list_destroy(dayloglist);
+            <string>ds_list_destroy(list);
 </string>
           </argument>
         </arguments>
@@ -77,9 +73,21 @@ while(n&lt;10) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (room = rm_daytime)
+            <string>if (global.showlog)
 {
     visible=1;
+    switch (keyboard_key)
+    {
+        case vk_down:
+            offset = max(offset - 1, 0);
+        break;
+        case vk_up:
+            offset = min(offset + 1, (ds_list_size(global.loglist) - min(ds_list_size(global.loglist), length)));
+        break;
+        case vk_space:
+            ds_list_add(global.loglist, "MESSAGE! " + string(ds_list_size(global.loglist) + 1));
+        break;
+    }
 }
 else {
    visible=0; 
@@ -106,14 +114,11 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var i, n = 0, line = "";
-for (i = 0; i &lt; min(ds_list_size(dayloglist), length); i++)
+            <string>var i, n, line = "";
+for (i = 0; i &lt; min(ds_list_size(global.loglist), length); i++)
 {
-    //show_debug_message(string(ds_list_size(dayloglist)));
-    //show_debug_message(string(ds_list_find_value(dayloglist, 2)));
-    line += string(ds_list_find_value(dayloglist, i + max(ds_list_size(dayloglist) - length, 0))+ "#");
+    line += string(ds_list_find_value(global.loglist, i + max(ds_list_size(global.loglist) - length, 0) - offset)) + "#";
 }
-// show_debug_message(line);
 draw_text(x, y, line);
 </string>
           </argument>

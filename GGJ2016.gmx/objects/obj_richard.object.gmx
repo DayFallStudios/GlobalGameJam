@@ -63,6 +63,75 @@ global.work_events_list = ds_list_create();
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///moving from room to room
+
+/*if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+    if (place_meeting(x, y+1, obj_mbedhall))
+        {
+        room_goto(rm_hall);
+        x = 60;
+        y = 450;
+        }
+        
+    if (place_meeting(x,y+1,obj_kroomhall))
+        {
+        room_goto(rm_hall);
+        x = 544;
+        y = 448;
+        }
+        
+    if (place_meeting(x,y+1,obj_washroomhall))
+        {
+        room_goto(rm_hall);
+        x = 288;
+        y = 448;
+        }
+        
+    if (place_meeting(x,y+1,obj_hallmbed))
+        {
+        room_goto(rm_master_bedroom);
+        x = 864;
+        y = 384;
+        }
+        
+    if (place_meeting(x,y+1,obj_hallwashroom))
+        {
+        room_goto(rm_bathroom);
+        x = 896;
+        y = 512;
+        }
+        
+    if (place_meeting(x,y+1,obj_hallkroom))
+        {
+            room_goto(rm_bedroom);
+            x = 896;
+            y = 416;
+        }
+        
+    
+
+
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>
 if (instance_exists(obj_mbedhall)) {
     if (collision_rectangle(x-40, y-150, x+40 , y+150, obj_mbedhall, false, true)){
@@ -98,8 +167,8 @@ if (instance_exists(obj_kroomhall)) {
     }
 }
 
-if (instance_exists(obj_hallmbed) &amp;&amp; instance_exists(obj_hallwashroom) &amp;&amp;  instance_exists(obj_hallkroom)) {    
-    if (collision_rectangle(x-30, 300, x+30 , 600, obj_hallmbed, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallwashroom, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallkroom, false, true)){
+if (instance_exists(obj_hallmbed) &amp;&amp; instance_exists(obj_hallwashroom) &amp;&amp;  instance_exists(obj_hallkroom) &amp;&amp; instance_exists(obj_dstairs)) {    
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_dstairs, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallmbed, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallwashroom, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_hallkroom, false, true)){
         obj_up.x = x;
         obj_up.y = 275;
         obj_up.visible = true;
@@ -110,16 +179,27 @@ if (instance_exists(obj_hallmbed) &amp;&amp; instance_exists(obj_hallwashroom) &
 }
 
 
-if (instance_exists(obj_dstairs)) {
-    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_dstairs, false, true)){
+if (instance_exists(obj_lhallliving) &amp;&amp; instance_exists(obj_lhallkitchen) &amp;&amp;  instance_exists(obj_fdoor) &amp;&amp; instance_exists(obj_ustairs)) {   
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_lhallliving, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_lhallkitchen, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_fdoor, false, true) || collision_rectangle(x-30, 300, x+30 , 600, obj_ustairs, false, true)){
+        obj_up.x = x;
+        obj_up.y = 275;
+        obj_up.visible = true;
+        }
+    else {
+        obj_up.visible = false;
+    }
+}
+
+if (instance_exists(obj_table)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_table, false, true)){
         obj_down.x = x;
         obj_down.y = y - 175;
         obj_down.visible = true;
         }
-    else{
+    else {
         obj_down.visible = false;
-        }
     }
+}
 
 if (instance_exists(obj_bed)) {
     if (collision_rectangle(x-50, y-150, x+50, y+150, obj_bed, false, true)){
@@ -146,8 +226,6 @@ if (keyboard_check_released(ord('L'))){
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="5" enumb="87">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -164,40 +242,375 @@ if (keyboard_check_released(ord('L'))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (collision_rectangle(x-50, y-150, x+50, y+150, obj_mbedhall, false, true))
-    {
-    room_goto(rm_hall);
-    x = 60;
-    y = 450;
+            <string>/*if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+    if (place_meeting(x,y,obj_ustairs))  
+        {
+        room_goto(rm_hall);
+        x = 830;
+        y = 512;
+        }
+        
+    if (place_meeting(x,y,obj_lhallliving)) 
+        {
+        room_goto(rm_kitchen);
+        x = 32;
+        y = 512;
+        }
+        
+    if (place_meeting(x,y,obj_lhallkitchen))   
+        {
+        room_goto(rm_livingrom);
+        x = 32;
+        y = 416;
+        }
+        
+    if (place_meeting(x,y,obj_kitchenlhall)) 
+        {
+        room_goto(rm_lowerhall);
+        x = 32;
+        y = 200;
+        }
+        
+    if (place_meeting(x,y,obj_livinglhall))   
+        {
+        room_goto(rm_lowerhall);
+        x = 32;
+        y = 200;
+        }
+        
+   
+     if (place_meeting(x,y+1,obj_dstairs))
+        {
+        room_goto(rm_lowerhall);
+        x = 64;
+        y = 448;
+        }
+        
     }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_kroomhall, false, true))
-    {
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_kitchenlhall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+        room_goto(rm_lowerhall);
+        x = 32;
+        y = 448;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_livinglhall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+        room_goto(rm_lowerhall);
+        x = 32;
+        y = 448;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_lhallkitchen">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+        room_goto(rm_kitchen);
+        x = 32;
+        y = 512;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_lhallliving">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+        room_goto(rm_livingrom);
+        x = 32;
+        y = 416;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ustairs">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
     room_goto(rm_hall);
-    x = 544;
+    x = 830;
     y = 448;
     }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallmbed, false, true))
-    {
-    room_goto(rm_master_bedroom);
-    x = 864;
-    y = 384;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_kroomhall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+        room_goto(rm_hall);
+        x = 544;
+        y = 448;
     }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallwashroom, false, true))
-    {
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_hallkroom">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+        room_goto(rm_bedroom);
+        x = 896;
+        y = 416;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_washroomhall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+    room_goto(rm_hall);
+    x = 288;
+    y = 448;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_hallwashroom">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
     room_goto(rm_bathroom);
-    x = 864;
-    y = 384;
-    }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallkroom, false, true))
-    {
-    room_goto(rm_bedroom);
     x = 896;
-    y = 416;
+    y = 512;
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_hallmbed">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+        room_goto(rm_master_bedroom);
+        x = 864;
+        y = 384;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_dstairs">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+    room_goto(rm_lowerhall);
+    x = 64;
+    y = 448;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_mbedhall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
+    room_goto(rm_hall);
+        x = 60;
+        y = 450;
+        }
 </string>
           </argument>
         </arguments>
@@ -270,69 +683,6 @@ x -= 5;
             <kind>1</kind>
             <string>/// move right
 x += 5;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="38">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (collision_rectangle(x-50, y-150, x+50, y+150, obj_mbedhall, false, true))
-    {
-    room_goto(rm_hall);
-    x = 60;
-    y = 450;
-    }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_kroomhall, false, true))
-    {
-    room_goto(rm_hall);
-    x = 544;
-    y = 448;
-    }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_washroomhall, false, true))
-    {
-    room_goto(rm_hall);
-    x = 288;
-    y = 448;
-    }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallmbed, false, true))
-    {
-    room_goto(rm_master_bedroom);
-    x = 864;
-    y = 384;
-    }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallwashroom, false, true))
-    {
-    room_goto(rm_bathroom);
-    x = 896;
-    y = 512;
-    }
-    
-if (collision_rectangle(x-50, y-150, x+50, y+150, obj_hallkroom, false, true))
-    {
-    room_goto(rm_bedroom);
-    x = 896;
-    y = 416;
-    }
 </string>
           </argument>
         </arguments>

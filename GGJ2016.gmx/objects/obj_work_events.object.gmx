@@ -59,7 +59,29 @@ ds_list_add(global.work_events_list, nwe);
 nwe = instance_create(10,10,obj_event);
 nwe.sentence = "Your coworker complimented your complexion. That was nice of her.";
 nwe.anx_effect = -5;
-nwe.money_effect = 5;
+nwe.money_effect = 0;
+ds_list_add(global.work_events_list, nwe);
+
+// Event #4
+nwe = instance_create(10,10,obj_event);
+nwe.sentence = "You made some good progress on your work.";
+nwe.anx_effect = -5;
+nwe.money_effect = 3;
+ds_list_add(global.work_events_list, nwe);
+
+// Event #5
+nwe = instance_create(10,10,obj_event);
+nwe.sentence = "You just made a massive sale. The boss should be happy with that!";
+nwe.anx_effect = -5;
+nwe.money_effect = 6;
+ds_list_add(global.work_events_list, nwe);
+
+////********** MEH events **********////
+// Event #6
+nwe = instance_create(10,10,obj_event);
+nwe.sentence = "You spilled some papers on the floor. Nobody helped you pick them up.";
+nwe.anx_effect = 2;
+nwe.money_effect = 0;
 ds_list_add(global.work_events_list, nwe);
 </string>
           </argument>
