@@ -82,17 +82,18 @@ obj_daylog.y -= 180;
             <string>/// every frame do:
 
 time += 0.10; // after 1 second, time = 3;
-if (time==12) drawn_frame=false;
-if (time==30) drawn_frame=false;
-if (time==60) drawn_frame=false;
-if (time==90) drawn_frame=false;
-if (time==120) drawn_frame=false;
-if (time==138) drawn_frame=false;
-if (time==150) drawn_frame=false;
+length = 12;
+if (time==length) drawn_frame=false;
+if (time==length*2) drawn_frame=false;
+if (time==length*3) drawn_frame=false;
+if (time==length*4) drawn_frame=false;
+if (time==length*5) drawn_frame=false;
+if (time==length*6) drawn_frame=false;
+if (time==length*7) drawn_frame=false;
 
 y_change = 19;
 // If first four seconds of daytime (Early morning)
-if ((time &lt; 12) &amp;&amp; !(drawn_frame)) {
+if ((time &lt; length) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
     background_colour = make_color_rgb(230,200,100);
@@ -100,7 +101,7 @@ if ((time &lt; 12) &amp;&amp; !(drawn_frame)) {
     drawn_frame = true;
 }
 // If next 6 seconds (Morning)
-else if ((time &gt;= 12) &amp;&amp; (time &lt; 30) &amp;&amp; !(drawn_frame)) {
+else if ((time &gt;= length) &amp;&amp; (time &lt; length*2) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
     background_colour = make_color_rgb(230,220,150);
@@ -108,7 +109,7 @@ else if ((time &gt;= 12) &amp;&amp; (time &lt; 30) &amp;&amp; !(drawn_frame)) {
     drawn_frame = true;
 }
 // If next 10 seconds (Before noon)
-else if ((time &gt;= 30) &amp;&amp; (time &lt; 60) &amp;&amp; !(drawn_frame)) {
+else if ((time &gt;= length*2) &amp;&amp; (time &lt; length*3) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
     background_colour = make_color_rgb(170,220,220);
@@ -116,7 +117,7 @@ else if ((time &gt;= 30) &amp;&amp; (time &lt; 60) &amp;&amp; !(drawn_frame)) {
     drawn_frame = true;
 }
 // If next 10 seconds (Noon)
-else if ((time &gt;= 60) &amp;&amp; (time &lt; 90) &amp;&amp; !(drawn_frame)) {
+else if ((time &gt;= length*3) &amp;&amp; (time &lt; length*4) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
     background_colour = make_color_rgb(70,150,255);
@@ -124,7 +125,7 @@ else if ((time &gt;= 60) &amp;&amp; (time &lt; 90) &amp;&amp; !(drawn_frame)) {
     drawn_frame = true;
 }
 // If next 10 seconds (Afternoon)
-else if ((time &gt;= 90) &amp;&amp; (time &lt; 120) &amp;&amp; !(drawn_frame)) {
+else if ((time &gt;= length*4) &amp;&amp; (time &lt; length*5) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
     background_colour = make_color_rgb(100,170,255);
@@ -132,7 +133,7 @@ else if ((time &gt;= 90) &amp;&amp; (time &lt; 120) &amp;&amp; !(drawn_frame)) {
     drawn_frame = true;
 }
 // If next 6 seconds (Late afternoon)
-else if ((time &gt;= 120) &amp;&amp; (time &lt; 138) &amp;&amp; !(drawn_frame)) {
+else if ((time &gt;= length*5) &amp;&amp; (time &lt; length*6) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
     background_colour = make_color_rgb(255,200,100);
@@ -140,7 +141,7 @@ else if ((time &gt;= 120) &amp;&amp; (time &lt; 138) &amp;&amp; !(drawn_frame)) 
     drawn_frame = true;
 }
 // If next 4 seconds (Dusk)
-else if ((time &gt;= 138) &amp;&amp; (time &lt; 150) &amp;&amp; !(drawn_frame)) {
+else if ((time &gt;= length*6) &amp;&amp; (time &lt; length*7) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
     background_colour = make_color_rgb(255,100,20);
@@ -148,16 +149,18 @@ else if ((time &gt;= 138) &amp;&amp; (time &lt; 150) &amp;&amp; !(drawn_frame)) 
     drawn_frame = true;
 }
 // If next 10 seconds (Evening)
-else if ((time &gt;= 150) &amp;&amp; (time &lt; 180) &amp;&amp; !(drawn_frame)) {
+else if ((time &gt;= length*7) &amp;&amp; (time &lt; length*8) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
     background_colour = make_color_rgb(0,0,100);
     timeframe = "Evening: ";
     drawn_frame = true;
 }
-else {
-    //time = 0;
+else if (time&gt;length*8) {
     // Choice time
+    obj_richard.visible = true;
+    time = 0;
+    room_goto(rm_lowerhall);
 }
 </string>
           </argument>
@@ -187,7 +190,7 @@ if !(text_logged) {
     anx = global.anxiety;
     // Anxiety is low, increase probability of list[0-4]
     // No chance of list[29-34]
-    if (anx &lt; 10) {
+    if (anx &lt; 7) {
         random_set_seed(current_time);
         // 33% chance of occuring:
         if (random(2) == 1) {
@@ -203,7 +206,7 @@ if !(text_logged) {
         event = ds_list_find_value(global.work_events_list, index);
         text = event.sentence;
         global.anxiety += event.anx_effect;
-       // global.money += event.money_effect;
+        // global.money += event.money_effect;
         global.fam_rating += event.family_effect;
     }
     // Anxiety is medium, get meh responses
