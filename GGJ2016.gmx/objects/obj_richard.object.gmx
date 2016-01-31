@@ -311,8 +311,7 @@ if (keyboard_check_released(ord('L'))){
             <kind>1</kind>
             <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
         room_goto(rm_lowerhall);
-        x = 32;
-        y = 448;
+
     }
 </string>
           </argument>
@@ -338,62 +337,7 @@ if (keyboard_check_released(ord('L'))){
             <kind>1</kind>
             <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
         room_goto(rm_lowerhall);
-        x = 32;
-        y = 448;
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_lhallkitchen">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
-        room_goto(rm_kitchen);
-        x = 32;
-        y = 512;
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_lhallliving">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
-        room_goto(rm_livingrom);
-        x = 32;
-        y = 416;
+
     }
 </string>
           </argument>
@@ -501,7 +445,7 @@ if (keyboard_check_released(ord('L'))){
             <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
     room_goto(rm_hall);
     x = 288;
-    y = 448;
+    y = 450;
     }
 </string>
           </argument>
@@ -528,7 +472,7 @@ if (keyboard_check_released(ord('L'))){
             <string>if (keyboard_check(vk_up) || keyboard_check( ord("W"))){
     room_goto(rm_bathroom);
     x = 896;
-    y = 512;
+    y = 415;
     }
 </string>
           </argument>
@@ -616,6 +560,28 @@ if (keyboard_check_released(ord('L'))){
         </arguments>
       </action>
     </event>
+    <event eventtype="5" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>rm_livingrom</room>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="5" enumb="68">
       <action>
         <libid>1</libid>
@@ -683,6 +649,38 @@ x -= 5;
             <kind>1</kind>
             <string>/// move right
 x += 5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (place_meeting(x,y,obj_lhallkitchen)){
+    room_goto(5);
+    x = 64;
+    y = 384;
+    }
+if(place_meeting(x,y,obj_lhallliving)){
+    room_goto(6);
+    x = 896;
+    y = 352;
+    }
 </string>
           </argument>
         </arguments>

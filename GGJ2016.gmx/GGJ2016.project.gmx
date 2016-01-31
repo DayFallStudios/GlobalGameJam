@@ -38,6 +38,15 @@
     <sprite>sprites\spr_goal_left</sprite>
     <sprite>sprites\spr_ustairs</sprite>
     <sprite>sprites\spr_table</sprite>
+    <sprite>sprites\spr_bathtub</sprite>
+    <sprite>sprites\spr_toilet</sprite>
+    <sprite>sprites\spr_sink</sprite>
+    <sprite>sprites\spr_mirror</sprite>
+    <sprite>sprites\spr_garcan</sprite>
+    <sprite>sprites\spr_tv</sprite>
+    <sprite>sprites\spr_meal</sprite>
+    <sprite>sprites\spr_kettle</sprite>
+    <sprite>sprites\spr_mat</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -47,6 +56,8 @@
     <background>background\bg_hall</background>
     <background>background\bg_kbedroom</background>
     <background>background\bg_bathroom</background>
+    <background>background\bg_kitchen</background>
+    <background>background\bg_living</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -94,6 +105,15 @@
     <object>objects\obj_lhallkitchen</object>
     <object>objects\obj_livinglhall</object>
     <object>objects\obj_kitchenlhall</object>
+    <object>objects\obj_garcan</object>
+    <object>objects\obj_mirror</object>
+    <object>objects\obj_sink</object>
+    <object>objects\obj_bathtub</object>
+    <object>objects\obj_toilet</object>
+    <object>objects\obj_tv</object>
+    <object>objects\obj_meal</object>
+    <object>objects\obj_kettle</object>
+    <object>objects\obj_mat</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
