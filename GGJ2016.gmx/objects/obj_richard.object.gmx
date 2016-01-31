@@ -421,11 +421,19 @@ if (move != 0) {
     image_xscale = move;
     sprite_index = spr_rich_moving;
     image_speed = 0.3;
+    if (image_index == 0) {
+        if !(sound_isplaying(walking)) {
+            sound_play(walking);
+        }
+    }
+    
+    //if (image_index == 0) {
+        
+    //}
 
 } else {
     sprite_index = spr_richard;
 }
-
 </string>
           </argument>
         </arguments>

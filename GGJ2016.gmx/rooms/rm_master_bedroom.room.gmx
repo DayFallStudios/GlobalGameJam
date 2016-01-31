@@ -51,7 +51,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="&lt;undefined&gt;" x="352" y="384" name="inst_4D31A321" locked="0" code="" scaleX="1" scaleY="0.992907822132111" colour="4294967295" rotation="0"/>
     <instance objName="obj_mbedhall" x="864" y="384" name="inst_7A65D0EF" locked="0" code="" scaleX="0.95652174949646" scaleY="1.07046985626221" colour="4294967295" rotation="0"/>
     <instance objName="obj_up" x="416" y="192" name="inst_8C4FCE5A" locked="0" code="" scaleX="0.495327115058899" scaleY="0.496551722288132" colour="4294967295" rotation="0"/>
     <instance objName="obj_bed" x="160" y="480" name="inst_583C5A87" locked="0" code="" scaleX="0.842105269432068" scaleY="0.640449464321137" colour="4294967295" rotation="0"/>
