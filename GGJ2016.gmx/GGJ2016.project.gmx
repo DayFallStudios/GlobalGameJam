@@ -20,6 +20,11 @@
     <sprite>sprites\spr_dstairs</sprite>
     <sprite>sprites\spr_fdoor</sprite>
     <sprite>sprites\bathtub</sprite>
+    <sprite>sprites\bat</sprite>
+    <sprite>sprites\ball</sprite>
+    <sprite>sprites\wall</sprite>
+    <sprite>sprites\goal_right</sprite>
+    <sprite>sprites\goal_left</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -63,6 +68,13 @@
     <object>objects\obj_daylog</object>
     <object>objects\obj_event</object>
     <object>objects\obj_work_events</object>
+    <object>objects\bat_right</object>
+    <object>objects\bat_left</object>
+    <object>objects\wall_obj</object>
+    <object>objects\Ball_obj</object>
+    <object>objects\goal_right_obj</object>
+    <object>objects\goal_left_obj</object>
+    <object>objects\controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_daytime</room>
@@ -73,6 +85,7 @@
     <room>rooms\rm_kitchen</room>
     <room>rooms\rm_livingrom</room>
     <room>rooms\rm_hall</room>
+    <room>rooms\Pong</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
