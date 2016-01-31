@@ -48,6 +48,8 @@
     <sprite>sprites\spr_kettle</sprite>
     <sprite>sprites\spr_mat</sprite>
     <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_son</sprite>
+    <sprite>sprites\spr_computer</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -120,6 +122,8 @@
     <object>objects\obj_kettle</object>
     <object>objects\obj_mat</object>
     <object>objects\obj_title</object>
+    <object>objects\obj_kid</object>
+    <object>objects\obj_sonComputer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
