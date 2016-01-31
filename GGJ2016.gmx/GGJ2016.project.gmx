@@ -130,6 +130,12 @@
     <object>objects\obj_hud</object>
     <object>objects\obj_hud2</object>
     <object>objects\obj_hud3</object>
+    <object>objects\obj_birdcall_sound</object>
+    <object>objects\obj_CawSound</object>
+    <object>objects\obj_GameEndSound</object>
+    <object>objects\obj_gameover</object>
+    <object>objects\obj_GameStartSound</object>
+    <object>objects\obj_walkingsound</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
