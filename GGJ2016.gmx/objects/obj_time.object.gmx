@@ -186,7 +186,11 @@ else if (time&gt;length*8) {
             <kind>1</kind>
             <string>///What gets written
 
+text = "";
 if !(text_logged) {
+    show_debug_message("size: "+string(ds_list_size(global.work_events_list)));
+    show_debug_message(ds_list_find_value(global.work_events_list, 3).sentence);
+    
     anx = global.anxiety;
     // Anxiety is low, increase probability of list[0-4]
     // No chance of list[29-34]

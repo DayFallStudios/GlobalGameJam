@@ -77,7 +77,6 @@
     <object>objects\obj_btn_options</object>
     <object>objects\obj_btn_twitter</object>
     <object>objects\obj_up</object>
-    <object>objects\obj_time</object>
     <object>objects\obj_wife</object>
     <object>objects\obj_log</object>
     <object>objects\obj_bed</object>
@@ -120,6 +119,7 @@
     <object>objects\obj_kettle</object>
     <object>objects\obj_mat</object>
     <object>objects\obj_title</object>
+    <object>objects\obj_time</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
