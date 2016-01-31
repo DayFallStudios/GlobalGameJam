@@ -152,7 +152,7 @@ else if ((time &gt;= length*6) &amp;&amp; (time &lt; length*7) &amp;&amp; !(draw
 else if ((time &gt;= length*7) &amp;&amp; (time &lt; length*8) &amp;&amp; !(drawn_frame)) {
     obj_daylog.y += y_change;
     text_logged = false;
-    background_colour = make_color_rgb(0,0,100);
+    background_colour = make_color_rgb(20,20,100);
     timeframe = "Evening: ";
     drawn_frame = true;
 }

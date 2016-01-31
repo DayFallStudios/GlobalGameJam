@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,36 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>length = 10;
-dayloglist = ds_list_create();
-n=0;
-while(n&lt;10) {
-    ds_list_add(dayloglist, " #");
-    n++;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>ds_list_destroy(dayloglist);
+            <string>global.day = 0;
+global.familyevents = 0;
+
+text = "Day " + string(global.day + 1) + " of 7      Time for " + string(3 - global.familyevents) + " choices";
 </string>
           </argument>
         </arguments>
@@ -77,12 +51,11 @@ while(n&lt;10) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (room = rm_daytime)
-{
-    visible=1;
-}
-else {
-   visible=0; 
+            <string>if ((room==rm_main_menu) || (room==rm_endscreen)) {
+    obj_hud2.visible = false;
+} else {
+    text = "Day " + string(global.day + 1) + " of 7      Time for " + string(3 - global.familyevents) + " choices";
+    obj_hud2.visible = true;
 }
 </string>
           </argument>
@@ -106,18 +79,10 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var i, n = 0, line = "";
-for (i = 0; i &lt; min(ds_list_size(dayloglist), length); i++)
-{
-    //show_debug_message(string(ds_list_size(dayloglist)));
-    //show_debug_message(string(ds_list_find_value(dayloglist, 2)));
-    line += string(ds_list_find_value(dayloglist, i + max(ds_list_size(dayloglist) - length, 0))+ "#");
-}
-// show_debug_message(line);
-draw_set_colour(c_black);
-draw_set_font(fnt_arial);
+            <string>draw_set_colour(c_aqua);
+draw_set_font(fnt_tailee);
 draw_set_halign(fa_left);
-draw_text(x, y, line);
+draw_text(x,y,text);
 </string>
           </argument>
         </arguments>

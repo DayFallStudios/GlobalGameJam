@@ -147,30 +147,6 @@ ending_line += "Daily rituals can be incredibly important in maintaining a healt
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>526</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_font</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>12</kind>
-            <font>fnt_arial</font>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -191,6 +167,8 @@ ending_line += "Daily rituals can be incredibly important in maintaining a healt
             <kind>1</kind>
             <string>///Talk
 draw_set_colour(c_white);
+draw_set_font(fnt_arial);
+draw_set_halign(fa_left);
 if (room == rm_endscreen) {
     draw_text(x,y,ending_line);
 }

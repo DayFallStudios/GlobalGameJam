@@ -71,6 +71,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_arial</font>
+    <font>fonts\fnt_tailee</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_richard</object>
@@ -126,6 +127,8 @@
     <object>objects\obj_sonComputer</object>
     <object>objects\obj_time</object>
     <object>objects\obj_ending</object>
+    <object>objects\obj_hud</object>
+    <object>objects\obj_hud2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
