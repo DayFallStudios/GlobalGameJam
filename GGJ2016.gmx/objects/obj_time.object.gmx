@@ -160,6 +160,7 @@ else if (time&gt;length*8) {
     // Choice time
     obj_richard.visible = true;
     time = 0;
+    global.day+=1;
     room_goto(rm_lowerhall);
 }
 </string>
@@ -188,16 +189,14 @@ else if (time&gt;length*8) {
 
 text = "";
 if !(text_logged) {
-    show_debug_message("size: "+string(ds_list_size(global.work_events_list)));
-    show_debug_message(ds_list_find_value(global.work_events_list, 3).sentence);
-    
     anx = global.anxiety;
     // Anxiety is low, increase probability of list[0-4]
     // No chance of list[29-34]
-    if (anx &lt; 7) {
+    //anx = 15; // Debugging
+    if (anx &lt; 5) {
         random_set_seed(current_time);
         // 33% chance of occuring:
-        if (random(2) == 1) {
+        if (irandom(2) == 1) {
             index = irandom(4); // choose good thing at index
             event = ds_list_find_value(global.work_events_list, index);
             text = event.sentence;
@@ -205,13 +204,15 @@ if !(text_logged) {
             //global.money += event.money_effect;
             global.fam_rating += event.family_effect;
         }
-        // Choose from range 5-29
-        index = irandom(24)+5;
-        event = ds_list_find_value(global.work_events_list, index);
-        text = event.sentence;
-        global.anxiety += event.anx_effect;
-        // global.money += event.money_effect;
-        global.fam_rating += event.family_effect;
+        else {
+            // Choose from range 5-29
+            index = irandom(24)+5;
+            event = ds_list_find_value(global.work_events_list, index);
+            text = event.sentence;
+            global.anxiety += event.anx_effect;
+            // global.money += event.money_effect;
+            global.fam_rating += event.family_effect;
+        }
     }
     // Anxiety is medium, get meh responses
     else if (anx &lt; 15) {
@@ -224,8 +225,8 @@ if !(text_logged) {
         global.fam_rating += event.family_effect;
     }
     // Anxiety is high, higher chance of bad stuff
-    else {
-        if (random(2) == 1) {
+    else if (anx &gt;= 15) {
+        if (irandom(2) == 1) {
             index = irandom(4)+30;
             event = ds_list_find_value(global.work_events_list, index);
             text = event.sentence;
@@ -233,11 +234,20 @@ if !(text_logged) {
             //global.money += event.money_effect;
             global.fam_rating += event.family_effect;
         }
+        else {
+            // Choose from range 5-29
+            index = irandom(24)+5;
+            event = ds_list_find_value(global.work_events_list, index);
+            text = event.sentence;
+            global.anxiety += event.anx_effect;
+            // global.money += event.money_effect;
+            global.fam_rating += event.family_effect;
+        }
     }
     // get obj_daylog.dayloglist
     ds_list_add(obj_daylog.dayloglist, timeframe+text);
     text_logged = true;
-    show_debug_message("ANXIETY: "+string(global.anxiety) + " | FAM_RATING: " + string(global.fam_rating));
+    show_debug_message("ANXIETY: "+string(global.anxiety) + " | FAM_RATING: " + string(global.fam_rating) + " | Day: " + string(global.day));
 }
 </string>
           </argument>

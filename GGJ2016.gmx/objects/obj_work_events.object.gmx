@@ -32,35 +32,35 @@ if(ds_list_size(global.work_events_list) == 0) {
     // Event #1 (note nwe = New Work Event
     nwe = instance_create(10,10,obj_event);
     nwe.sentence = "The boss thought you were doing a great job; you've been promoted!";
-    nwe.anx_effect = -5;
+    nwe.anx_effect = -2;
     nwe.money_effect = 5;
     ds_list_add(global.work_events_list, nwe);
     
     // Event #2
     nwe = instance_create(10,10,obj_event);
     nwe.sentence = "Boss says you can go home early with pay!";
-    nwe.anx_effect = -5;
+    nwe.anx_effect = -2;
     nwe.money_effect = 5;
     ds_list_add(global.work_events_list, nwe);
     
     // Event #3
     nwe = instance_create(10,10,obj_event);
     nwe.sentence = "Your coworker complimented your complexion. That was nice of her.";
-    nwe.anx_effect = -5;
+    nwe.anx_effect = -2;
     nwe.money_effect = 0;
     ds_list_add(global.work_events_list, nwe);
     
     // Event #4
     nwe = instance_create(10,10,obj_event);
     nwe.sentence = "You made some good progress on your work.";
-    nwe.anx_effect = -5;
+    nwe.anx_effect = -2;
     nwe.money_effect = 3;
     ds_list_add(global.work_events_list, nwe);
     
     // Event #5
     nwe = instance_create(10,10,obj_event);
     nwe.sentence = "You just made a massive sale. The boss should be happy with that!";
-    nwe.anx_effect = -5;
+    nwe.anx_effect = -2;
     nwe.money_effect = 6;
     ds_list_add(global.work_events_list, nwe);
     
@@ -117,8 +117,8 @@ if(ds_list_size(global.work_events_list) == 0) {
     
     // Event #13
     nwe = instance_create(10,10,obj_event);
-    nwe.sentence = "You wrote your personal feelings on Tumblr.";
-    nwe.anx_effect = -1;
+    nwe.sentence = "There was only decaf in the staff lounge.";
+    nwe.anx_effect = 2;
     nwe.money_effect = 0;
     ds_list_add(global.work_events_list, nwe);
     
@@ -139,7 +139,7 @@ if(ds_list_size(global.work_events_list) == 0) {
     
     // Event #16
     nwe = instance_create(10,10,obj_event);
-    nwe.sentence = "You forgot your lunch";
+    nwe.sentence = "You forgot your lunch.";
     nwe.anx_effect = 1;
     nwe.money_effect = 1;
     ds_list_add(global.work_events_list, nwe);

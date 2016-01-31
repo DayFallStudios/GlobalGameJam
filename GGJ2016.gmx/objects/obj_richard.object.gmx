@@ -30,6 +30,7 @@
 move_speed = 5;
 global.anxiety = 7;
 global.time = 0;
+global.day = 0; // goes up to 7
 global.money = 0;
 
 // How many things Richard can do before he has to go to work
