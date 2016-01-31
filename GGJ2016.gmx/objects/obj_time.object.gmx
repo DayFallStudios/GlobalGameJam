@@ -160,6 +160,8 @@ else if (time&gt;length*8) {
     // Choice time
     global.day+=1;
     time = 0;
+    audio_stop_sound(Anxiety);
+    audio_stop_sound(snd_no_anxiety);
     if(global.day &gt;= 7) {
         room_goto(rm_endscreen);
     }
