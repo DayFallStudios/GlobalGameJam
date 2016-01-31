@@ -185,7 +185,7 @@ if (instance_exists(obj_kitchenlhall)) {
 if (instance_exists(obj_livinglhall)) {
     if (collision_rectangle(x-30, y-150, x+30 , y+150, obj_livinglhall, false, true)){
         obj_up.x = x;
-         obj_up.y = 175;
+        obj_up.y = 175;
         obj_up.visible = true;
         }
     else {
@@ -233,6 +233,83 @@ if (instance_exists(obj_bed)) {
         obj_down.y = y - 175;
         obj_down.visible = true;
         }
+    else {
+        obj_down.visible = false;
+    }
+}
+
+if (instance_exists(obj_Toothbrush)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_Toothbrush, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_down.visible = false;
+    }
+}
+
+if (instance_exists(obj_Tiolet)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_Tiolet, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_down.visible = false;
+    }
+}
+
+ if (instance_exists(obj_garcan)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_garcan, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_visible = false;
+    }
+ }
+ 
+ if (instance_exists(obj_kettle)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_kettle, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_down.visible = false;
+    }
+ }
+ 
+ if (instance_exists(obj_mat)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_mat, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_down.visible = false;
+    }
+}
+
+ if (instance_exists(obj_tv)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_tv, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y - 175;
+        obj_down.visible = true;
+    }
+    else {
+        obj_down.visible = false;
+    }
+}
+
+ if (instance_exists(obj_wife)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_wife, false, true)) {
+        obj_down.x = x;
+        obj_down.y = y  - 175;
+        obj_down.visible = true;
+    }
     else {
         obj_down.visible = false;
     }
