@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_livinglhall" x="896" y="352" name="inst_FBBC140D" locked="0" code="" scaleX="0.637554585933685" scaleY="0.929292917251587" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tv" x="320" y="192" name="inst_0C7184E7" locked="0" code="" scaleX="0.331564992666244" scaleY="0.318267434835434" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tv" x="288" y="224" name="inst_0C7184E7" locked="0" code="" scaleX="0.483333319425583" scaleY="0.577380955219269" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
