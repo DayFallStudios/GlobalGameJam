@@ -28,7 +28,7 @@
             <string>global.day = 0;
 global.familyevents = 0;
 
-text = "Day " + string(global.day + 1) + " of 7";
+text = "Time for " + string(3 - global.familyevents) + " choices";
 </string>
           </argument>
         </arguments>
@@ -51,11 +51,11 @@ text = "Day " + string(global.day + 1) + " of 7";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((room==rm_main_menu) || (room==rm_endscreen)) {
-    obj_hud2.visible = false;
+            <string>if ((room==rm_main_menu) || (room==rm_endscreen) || (room==rm_daytime)) {
+    obj_hud3.visible = false;
 } else {
-    text = "Day " + string(global.day + 1) + " of 7";
-    obj_hud2.visible = true;
+    text = "Time for " + string(3 - global.familyevents) + " choices";
+    obj_hud3.visible = true;
 }
 </string>
           </argument>

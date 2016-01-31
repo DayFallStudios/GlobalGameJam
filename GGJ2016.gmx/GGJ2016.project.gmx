@@ -129,6 +129,7 @@
     <object>objects\obj_ending</object>
     <object>objects\obj_hud</object>
     <object>objects\obj_hud2</object>
+    <object>objects\obj_hud3</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
