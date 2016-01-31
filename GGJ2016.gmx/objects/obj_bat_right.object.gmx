@@ -67,8 +67,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_richard.visible=true;
-room_goto(rm_bedroom);
+            <string>if(global.familyevents==3){
+    global.familyevents=0;
+    room_goto(rm_daytime);
+}
+else{
+    obj_richard.visible=true;
+    room_goto(rm_bedroom);
+}
 
 </string>
           </argument>

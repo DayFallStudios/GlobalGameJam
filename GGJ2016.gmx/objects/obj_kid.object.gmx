@@ -29,7 +29,7 @@
 draw_set_colour(c_black);
 if (instance_exists(obj_richard) and (room == rm_bedroom)) {
     if(place_meeting(x,y,obj_richard)) {
-        draw_text(x-30,y-200,text);
+        draw_text(x-30,y-250,text);
     }
     draw_sprite(sprite_index,image_index,x,y);
 }
