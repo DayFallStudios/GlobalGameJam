@@ -243,8 +243,8 @@ if (instance_exists(obj_sonComputer)) {
 
 
 
-if (instance_exists(obj_Tiolet)) {
-    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_Tiolet, false, true)) {
+if (instance_exists(obj_toilet)) {
+    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_toilet, false, true)) {
         obj_down.x = x;
         obj_down.y = y - 175;
         obj_down.visible = true;
@@ -293,16 +293,7 @@ if (instance_exists(obj_kid)) {
     }
 }
 
-if (instance_exists(obj_meal)) {
-    if (collision_rectangle(x-50, y-150, x+50, y+150, obj_meal, false, true)) {
-        obj_down.x = x;
-        obj_down.y = y  - 175;
-        obj_down.visible = true;
-    }
-    else {
-        obj_down.visible = false;
-    }
-}
+
 
  if (instance_exists(obj_wife)) {
     if (collision_rectangle(x-50, y-150, x+50, y+150, obj_wife, false, true)) {
@@ -314,6 +305,8 @@ if (instance_exists(obj_meal)) {
         obj_down.visible = false;
     }
 }
+
+
 
 
 // don't leave the room
@@ -454,7 +447,7 @@ obj_down.visible = true;
 
 if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
     global.fam_rating -= 2;
-    global.anxiety += 1;
+    global.anxiety -= 1;
     global.familyevents += 1;
     room_goto(rm_pong_single);
     obj_richard.visible=false;
@@ -489,11 +482,118 @@ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
 if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
     global.fam_rating += 2;
     global.familyevents += 1;
+    global.anxiety+=1
     room_goto(rm_pong_mult);
     obj_richard.visible=false;
     obj_down.visible=false;
     }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_mat">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
+
+    if(global.familyevents==0){
+        global.fam_rating -= 3;
+        global.anxiety=floor(global.anxiety*0.6)
+        room_goto(rm_daytime);
+        obj_richard.visible=false;
+        obj_down.visible=false;
+        obj_up.visible=false;
+        
+    }
+    else{
+        draw_text(obj_richard.x+100,obj_richard.y-350,"Not Enough Time");
+    }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_tv">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
+    global.fam_rating -= 1;
+    global.familyevents += 1;
+    global.anxiety-=2;
+            if(global.familyevents==3){
+               global.familyevents=0;
+                room_goto(rm_daytime);
+                obj_richard.visible=false;
+                obj_down.visible=false;
+                obj_up.visible=false;
+            }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_toilet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
+    global.familyevents += 1;
+    global.anxiety-=2;
+             if(global.familyevents==3){
+               global.familyevents=0;
+                room_goto(rm_daytime);
+                obj_richard.visible=false;
+                obj_down.visible=false;
+                obj_up.visible=false;
+            }
+}
 </string>
           </argument>
         </arguments>
@@ -764,6 +864,9 @@ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
             if(global.familyevents==3){
                global.familyevents=0;
                 room_goto(rm_daytime);
+                obj_richard.visible=false;
+                obj_down.visible=false;
+                obj_up.visible=false;
             }
 }
 </string>
@@ -789,12 +892,16 @@ if (keyboard_check(vk_down) || keyboard_check( ord("S"))){
           <argument>
             <kind>1</kind>
             <string>if (keyboard_check_released(vk_down) || keyboard_check_released( ord("S"))){
+
             global.fam_rating -= 2;
             global.familyevents += 1;
             global.anxiety-=1;
             if(global.familyevents==3){
                global.familyevents=0;
                 room_goto(rm_daytime);
+                obj_richard.visible=false;
+                obj_down.visible=false;
+                obj_up.visible=false;
             }
 }
 </string>

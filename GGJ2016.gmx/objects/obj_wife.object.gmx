@@ -58,14 +58,6 @@ text_logged=false;
             draw_text(x-30,y-250,text);
         }
     }
-    
-    global.fam_rating += 2;
-    global.familyevents += 1;
-    global.anxiety+=1;
-    if(global.familyevents==3){
-        global.familyevents=0;
-        room_goto(rm_daytime);
-    }
 }
 </string>
           </argument>

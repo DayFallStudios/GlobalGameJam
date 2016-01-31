@@ -51,7 +51,7 @@
     <sprite>sprites\spr_son</sprite>
     <sprite>sprites\spr_computer</sprite>
     <sprite>sprites\spr_rich_moving</sprite>
-    <sprite>sprites\spr_messybed</sprite>
+    <sprite>sprites\spr_meditating</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -94,6 +94,7 @@
     <object>objects\obj_hallwashroom</object>
     <object>objects\obj_washroomhall</object>
     <object>objects\obj_hallkroom</object>
+    <object>objects\obj_kroomhall</object>
     <object>objects\obj_daylog</object>
     <object>objects\obj_event</object>
     <object>objects\obj_work_events</object>
@@ -124,7 +125,6 @@
     <object>objects\obj_mat</object>
     <object>objects\obj_title</object>
     <object>objects\obj_kid</object>
-    <object>objects\obj_kroomhall</object>
     <object>objects\obj_sonComputer</object>
     <object>objects\obj_time</object>
     <object>objects\obj_ending</object>
