@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -110,14 +110,14 @@ ds_list_add(global.work_events_list, nwe);
 // Event #12
 nwe = instance_create(10,10,obj_event);
 nwe.sentence = "The cute IT girl was just in.";
-nwe.anx_effect = -2;
+nwe.anx_effect = -1;
 nwe.money_effect = -2;
 ds_list_add(global.work_events_list, nwe);
 
 // Event #13
 nwe = instance_create(10,10,obj_event);
 nwe.sentence = "You wrote your personal feelings on Tumblr.";
-nwe.anx_effect = -2;
+nwe.anx_effect = -1;
 nwe.money_effect = 0;
 ds_list_add(global.work_events_list, nwe);
 
@@ -132,7 +132,7 @@ ds_list_add(global.work_events_list, nwe);
 // Event #15
 nwe = instance_create(10,10,obj_event);
 nwe.sentence = "Your long awaited parcel arrived today.";
-nwe.anx_effect = -2;
+nwe.anx_effect = -1;
 nwe.money_effect = -2;
 ds_list_add(global.work_events_list, nwe);
 
@@ -167,7 +167,7 @@ ds_list_add(global.work_events_list, nwe);
 // Event #20
 nwe = instance_create(10,10,obj_event);
 nwe.sentence = "Coworker brought his dog in.";
-nwe.anx_effect = -2;
+nwe.anx_effect = -1;
 nwe.money_effect = 0;
 ds_list_add(global.work_events_list, nwe);
 
@@ -202,7 +202,7 @@ ds_list_add(global.work_events_list, nwe);
 // Event #25
 nwe = instance_create(10,10,obj_event);
 nwe.sentence = "You imagine a sci-fi cartoon starring you and Maury Povich: Rich and Maury.";
-nwe.anx_effect = 0;
+nwe.anx_effect = 1;
 nwe.money_effect = 0;
 ds_list_add(global.work_events_list, nwe);
 

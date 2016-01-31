@@ -82,7 +82,7 @@ obj_daylog.y -= 180;
             <string>/// every frame do:
 
 time += 0.10; // after 1 second, time = 3;
-length = 12;
+length = 15;
 if (time==length) drawn_frame=false;
 if (time==length*2) drawn_frame=false;
 if (time==length*3) drawn_frame=false;

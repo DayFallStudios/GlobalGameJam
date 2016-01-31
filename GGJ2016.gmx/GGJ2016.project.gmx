@@ -81,7 +81,6 @@
     <object>objects\obj_wife</object>
     <object>objects\obj_log</object>
     <object>objects\obj_bed</object>
-    <object>objects\obj_Anxiety</object>
     <object>objects\obj_down</object>
     <object>objects\obj_fdoor</object>
     <object>objects\obj_dstairs</object>
@@ -100,7 +99,6 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_ball</object>
     <object>objects\obj_goal_right</object>
-    <object>objects\obj_CawSound</object>
     <object>objects\obj_goal_left</object>
     <object>objects\obj_controller</object>
     <object>objects\obj_controller_singleGame</object>
@@ -108,7 +106,6 @@
     <object>objects\obj_table</object>
     <object>objects\obj_lhallliving</object>
     <object>objects\obj_lhallkitchen</object>
-    <object>objects\obj_walkingsound</object>
     <object>objects\obj_livinglhall</object>
     <object>objects\obj_kitchenlhall</object>
     <object>objects\obj_computer</object>
@@ -123,9 +120,6 @@
     <object>objects\obj_kettle</object>
     <object>objects\obj_mat</object>
     <object>objects\obj_title</object>
-    <object>objects\obj_GameStartSound</object>
-    <object>objects\obj_GameEndSound</object>
-    <object>objects\obj_birdcall_sound</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
