@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check(vk_up) || keyboard_check(ord("W")){
+            <string>if keyboard_check_released(vk_up) || keyboard_check_released(ord("W")){
     if(place_meeting(x,y,obj_richard)){
         room_goto(rm_livingrom);
         obj_richard.x += 384;
