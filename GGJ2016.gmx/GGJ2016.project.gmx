@@ -116,9 +116,9 @@
     <object>objects\obj_mat</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_daytime</room>
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_master_bedroom</room>
-    <room>rooms\rm_daytime</room>
     <room>rooms\rm_bathroom</room>
     <room>rooms\rm_bedroom</room>
     <room>rooms\rm_kitchen</room>
