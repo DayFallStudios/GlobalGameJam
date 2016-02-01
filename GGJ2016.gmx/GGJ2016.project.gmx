@@ -4,7 +4,22 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound9</sound>
+    <sound>sound\Anxiety</sound>
+    <sound>sound\walking</sound>
+    <sound>sound\eating</sound>
+    <sound>sound\coffee</sound>
+    <sound>sound\caw</sound>
+    <sound>sound\pong</sound>
+    <sound>sound\birdcall</sound>
+    <sound>sound\car</sound>
+    <sound>sound\ping</sound>
+    <sound>sound\snd_title</sound>
+    <sound>sound\snd_no_anxiety</sound>
+    <sound>sound\snd_good_end</sound>
+    <sound>sound\snd_bad_end</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_richard</sprite>
     <sprite>sprites\spr_bedroomdoor</sprite>
@@ -20,6 +35,27 @@
     <sprite>sprites\spr_dstairs</sprite>
     <sprite>sprites\spr_fdoor</sprite>
     <sprite>sprites\bathtub</sprite>
+    <sprite>sprites\spr_bat</sprite>
+    <sprite>sprites\spr_ball</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_goal_right</sprite>
+    <sprite>sprites\spr_goal_left</sprite>
+    <sprite>sprites\spr_ustairs</sprite>
+    <sprite>sprites\spr_table</sprite>
+    <sprite>sprites\spr_bathtub</sprite>
+    <sprite>sprites\spr_toilet</sprite>
+    <sprite>sprites\spr_sink</sprite>
+    <sprite>sprites\spr_mirror</sprite>
+    <sprite>sprites\spr_garcan</sprite>
+    <sprite>sprites\spr_tv</sprite>
+    <sprite>sprites\spr_meal</sprite>
+    <sprite>sprites\spr_kettle</sprite>
+    <sprite>sprites\spr_mat</sprite>
+    <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_son</sprite>
+    <sprite>sprites\spr_computer</sprite>
+    <sprite>sprites\spr_rich_moving</sprite>
+    <sprite>sprites\spr_meditating</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_master_bedroom</background>
@@ -29,13 +65,18 @@
     <background>background\bg_hall</background>
     <background>background\bg_kbedroom</background>
     <background>background\bg_bathroom</background>
+    <background>background\bg_kitchen</background>
+    <background>background\bg_living</background>
+    <background>background\bg_end</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\script1.gml</script>
     <script>scripts\script0.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_arial</font>
+    <font>fonts\fnt_tailee</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_richard</object>
@@ -46,9 +87,7 @@
     <object>objects\obj_btn_options</object>
     <object>objects\obj_btn_twitter</object>
     <object>objects\obj_up</object>
-    <object>objects\obj_time</object>
     <object>objects\obj_wife</object>
-    <object>objects\obj_log</object>
     <object>objects\obj_bed</object>
     <object>objects\obj_down</object>
     <object>objects\obj_fdoor</object>
@@ -63,16 +102,59 @@
     <object>objects\obj_daylog</object>
     <object>objects\obj_event</object>
     <object>objects\obj_work_events</object>
+    <object>objects\obj_bat_right</object>
+    <object>objects\obj_bat_left</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_ball</object>
+    <object>objects\obj_goal_right</object>
+    <object>objects\obj_goal_left</object>
+    <object>objects\obj_controller</object>
+    <object>objects\obj_controller_singleGame</object>
+    <object>objects\obj_ustairs</object>
+    <object>objects\obj_table</object>
+    <object>objects\obj_lhallliving</object>
+    <object>objects\obj_lhallkitchen</object>
+    <object>objects\obj_livinglhall</object>
+    <object>objects\obj_kitchenlhall</object>
+    <object>objects\obj_computer</object>
+    <object>objects\obj_delay</object>
+    <object>objects\obj_garcan</object>
+    <object>objects\obj_mirror</object>
+    <object>objects\obj_sink</object>
+    <object>objects\obj_bathtub</object>
+    <object>objects\obj_toilet</object>
+    <object>objects\obj_tv</object>
+    <object>objects\obj_meal</object>
+    <object>objects\obj_kettle</object>
+    <object>objects\obj_mat</object>
+    <object>objects\obj_title</object>
+    <object>objects\obj_kid</object>
+    <object>objects\obj_sonComputer</object>
+    <object>objects\obj_time</object>
+    <object>objects\obj_ending</object>
+    <object>objects\obj_hud</object>
+    <object>objects\obj_hud2</object>
+    <object>objects\obj_hud3</object>
+    <object>objects\obj_birdcall_sound</object>
+    <object>objects\obj_CawSound</object>
+    <object>objects\obj_GameEndSound</object>
+    <object>objects\obj_gameover</object>
+    <object>objects\obj_GameStartSound</object>
+    <object>objects\obj_walkingsound</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_daytime</room>
     <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_daytime</room>
     <room>rooms\rm_master_bedroom</room>
     <room>rooms\rm_bathroom</room>
     <room>rooms\rm_bedroom</room>
     <room>rooms\rm_kitchen</room>
+    <room>rooms\rm_endscreen</room>
     <room>rooms\rm_livingrom</room>
     <room>rooms\rm_hall</room>
+    <room>rooms\rm_lowerhall</room>
+    <room>rooms\rm_pong_mult</room>
+    <room>rooms\rm_pong_single</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
