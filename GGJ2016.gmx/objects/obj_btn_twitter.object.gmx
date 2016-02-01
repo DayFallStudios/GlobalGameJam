@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>/// do twitter stuff
 
-url_open("https://twitter.com/intent/tweet?text=Check out this awesome game! &amp;hashtags=MorningRich");
+url_open("http://twitter.com/share?text=Try%20this%20game%20called%20Morning%20Rich%20Built
+%20links%20for%20%40GlobalGameJam2016%20");
 </string>
           </argument>
         </arguments>

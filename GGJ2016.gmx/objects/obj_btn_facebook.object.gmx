@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Facebook stuff
 
-url_open("https://facebook.com/plugins/like.php?href=http/www.facebook.com/-----FacebookPageName");
+url_open("https://facebook.com/plugins/like.php?href=http/www.facebook.com/globalgamejam");
 </string>
           </argument>
         </arguments>

@@ -25,9 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>offset = 0;
-length = 10;
+            <string>length = 10;
 dayloglist = ds_list_create();
+n=0;
+while(n&lt;10) {
+    ds_list_add(dayloglist, " #");
+    n++;
+}
+
+if (global.anxiety &gt; 15) {
+    audio_play_sound(Anxiety,0,1);
+}
+else if (global.anxiety &lt;= 15) {
+    audio_play_sound(snd_no_anxiety,0,1);
+}
+
 </string>
           </argument>
         </arguments>
@@ -76,15 +88,6 @@ dayloglist = ds_list_create();
             <string>if (room = rm_daytime)
 {
     visible=1;
-    switch (keyboard_key)
-    {
-        case vk_down:
-            offset = max(offset - 1, 0);
-        break;
-        case vk_up:
-            offset = min(offset + 1, (ds_list_size(dayloglist) - min(ds_list_size(dayloglist), length)));
-        break;
-    }
 }
 else {
    visible=0; 
@@ -111,11 +114,17 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var i, n, line = "";
+            <string>var i, n = 0, line = "";
 for (i = 0; i &lt; min(ds_list_size(dayloglist), length); i++)
 {
-    line += string(ds_list_find_value(dayloglist, i + max(ds_list_size(dayloglist) - length, 0) - offset)) + "#";
+    //show_debug_message(string(ds_list_size(dayloglist)));
+    //show_debug_message(string(ds_list_find_value(dayloglist, 2)));
+    line += string(ds_list_find_value(dayloglist, i + max(ds_list_size(dayloglist) - length, 0))+ "#");
 }
+// show_debug_message(line);
+draw_set_colour(c_black);
+draw_set_font(fnt_arial);
+draw_set_halign(fa_left);
 draw_text(x, y, line);
 </string>
           </argument>
