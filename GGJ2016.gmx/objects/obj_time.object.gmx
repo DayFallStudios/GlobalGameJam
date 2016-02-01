@@ -28,7 +28,34 @@
             <string>/// Initialize time
 
 time = 0;
+text_logged = false;
+drawn_frame = false;
+timeframe = "";
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>fnt_arial</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -53,41 +80,109 @@ time = 0;
             <string>/// every frame do:
 
 time += 0.10; // after 1 second, time = 3;
+if (time==12) drawn_frame=false;
+if (time==30) drawn_frame=false;
+if (time==60) drawn_frame=false;
+if (time==90) drawn_frame=false;
+if (time==120) drawn_frame=false;
+if (time==138) drawn_frame=false;
+if (time==150) drawn_frame=false;
 
 // If first four seconds of daytime (Early morning)
-if (time &lt; 12) {
+if ((time &lt; 12) &amp;&amp; !(drawn_frame)) {
+    text_logged = false;
     background_colour = make_color_rgb(230,200,100);
+    timeframe = "Early morning: ";
+    drawn_frame = true;
 }
 // If next 6 seconds (Morning)
-else if ((time &gt;= 12) &amp;&amp; (time &lt; 30)) {
+else if ((time &gt;= 12) &amp;&amp; (time &lt; 30) &amp;&amp; !(drawn_frame)) {
+    text_logged = false;
     background_colour = make_color_rgb(230,220,150);
+    timeframe = "Morning: ";
+    drawn_frame = true;
 }
 // If next 10 seconds (Before noon)
-else if ((time &gt;= 30) &amp;&amp; (time &lt; 60)) {
+else if ((time &gt;= 30) &amp;&amp; (time &lt; 60) &amp;&amp; !(drawn_frame)) {
+    text_logged = false;
     background_colour = make_color_rgb(170,220,220);
+    timeframe = "Before noon: ";
+    drawn_frame = true;
 }
 // If next 10 seconds (Noon)
-else if ((time &gt;= 60) &amp;&amp; (time &lt; 90)) {
+else if ((time &gt;= 60) &amp;&amp; (time &lt; 90) &amp;&amp; !(drawn_frame)) {
+    text_logged = false;
     background_colour = make_color_rgb(70,150,255);
+    timeframe = "Noon: ";
+    drawn_frame = true;
 }
 // If next 10 seconds (Afternoon)
-else if ((time &gt;= 90) &amp;&amp; (time &lt; 120)) {
+else if ((time &gt;= 90) &amp;&amp; (time &lt; 120) &amp;&amp; !(drawn_frame)) {
+    text_logged = false;
     background_colour = make_color_rgb(100,170,255);
+    timeframe = "Afternoon: ";
+    drawn_frame = true;
 }
 // If next 6 seconds (Late afternoon)
-else if ((time &gt;= 120) &amp;&amp; (time &lt; 138)) {
+else if ((time &gt;= 120) &amp;&amp; (time &lt; 138) &amp;&amp; !(drawn_frame)) {
+    text_logged = false;
     background_colour = make_color_rgb(255,200,100);
+    timeframe = "Late afternoon: ";
+    drawn_frame = true;
 }
 // If next 4 seconds (Dusk)
-else if ((time &gt;= 138) &amp;&amp; (time &lt; 150)) {
+else if ((time &gt;= 138) &amp;&amp; (time &lt; 150) &amp;&amp; !(drawn_frame)) {
+    text_logged = false;
     background_colour = make_color_rgb(255,100,20);
+    timeframe = "Dusk: ";
+    drawn_frame = true;
 }
 // If next 10 seconds (Evening)
-else if ((time &gt;= 150) &amp;&amp; (time &lt; 180)) {
+else if ((time &gt;= 150) &amp;&amp; (time &lt; 180) &amp;&amp; !(drawn_frame)) {
+    text_logged = false;
     background_colour = make_color_rgb(0,0,100);
+    timeframe = "Evening: ";
+    drawn_frame = true;
 }
 else {
-    time = 0;
+    //time = 0;
+    // Choice time
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if !(text_logged) {
+    anx = global.anxiety;
+    if (anx &lt; 10) {
+        random_set_seed(current_time);
+        index = irandom(2); // choose good thing at index
+        event = ds_list_find_value(global.work_events_list, index);
+        text = event.sentence;
+        global.anxiety += event.anx_effect;
+        //global.money
+    }
+    // get obj_daylog.dayloglist
+    ds_list_add(obj_daylog.dayloglist, timeframe+text);
+    text_logged = true;
 }
 </string>
           </argument>
